@@ -20,7 +20,7 @@
 
 ---
 
-## 1. 레포 루트 확인 (가장 헷갈리는 지점)
+## 1. 레포 루트 확인
 
 서브모듈 명령은 **레포 루트(`.git`이 있는 폴더)** 에서 실행해야 한다.
 Unity 프로젝트가 하위 폴더(예: `Branch/`)에 들어가 있으면 레포 루트와 Assets 폴더가 어긋나니, 의심되면 확인:
@@ -51,10 +51,6 @@ git submodule add https://github.com/계정/private-레포.git Assets/_ExAssets
 
 `Assets/_ExAssets` 폴더 안으로 유료/대용량 리소스를 복사해 넣는다.
 (private 레포에 이미 리소스가 들어 있었다면 이 단계는 건너뛴다.)
-
-> ⚠️ **100 MB 넘는 파일 주의.** GitHub은 개별 파일 100 MB 초과를 거부한다(push 통째 거부).
-> - 필요 없는 대용량 파일이면 애초에 넣지 않거나 제외한다.
-> - 꼭 보관해야 하면 Git LFS로 추적한다: `git lfs install` → `git lfs track "*.tga"` 등.
 
 ---
 
@@ -97,8 +93,6 @@ git submodule status       # SHA가 정상 표시되는지
 ```bash
 git clone --recurse-submodules https://github.com/계정/공개-레포.git
 ```
-
-(LFS를 썼다면, 클론하는 PC에도 `git lfs install`이 돼 있어야 실제 파일로 받아진다.)
 
 ---
 
