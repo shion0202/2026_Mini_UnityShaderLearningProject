@@ -104,3 +104,8 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Purchased third-party assets — not redistributable.
+# Re-import the package (Package Manager / .unitypackage) after cloning.
+/[Aa]ssets/RealToon/
+/[Aa]ssets/RealToon.meta
