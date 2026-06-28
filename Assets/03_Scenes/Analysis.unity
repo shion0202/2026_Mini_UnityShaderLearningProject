@@ -224,13 +224,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225528383}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.656, y: 1.055, z: -0.335}
+  m_LocalRotation: {x: -0, y: -0.5027595, z: -0, w: 0.86442626}
+  m_LocalPosition: {x: -0.656, y: 0.752, z: -0.335}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -60.365, z: 0}
 --- !u!1 &691397935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1386,13 +1386,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786443505}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.60876137, z: 0, w: 0.7933534}
+  m_LocalRotation: {x: 0.3036032, y: 0.5624222, z: -0.23296289, w: 0.73296297}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 75, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 75, z: 0}
 --- !u!114 &1786443508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5730,6 +5730,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3955317637860286465, guid: f059f73e7a3a9fa4b82121a7e9b06d2f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5966926425100644848}
+    - targetCorrespondingSourceObject: {fileID: 5825284069600222640, guid: f059f73e7a3a9fa4b82121a7e9b06d2f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5966926425100644851}
   m_SourcePrefab: {fileID: 100100000, guid: f059f73e7a3a9fa4b82121a7e9b06d2f, type: 3}
 --- !u!4 &5966926425100644845 stripped
 Transform:
@@ -5763,7 +5766,36 @@ MonoBehaviour:
   materialIndex: 0
   invertForward: 0
   invertRight: 1
+  drawGizmo: 0
+--- !u!1 &5966926425100644849 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5825284069600222640, guid: f059f73e7a3a9fa4b82121a7e9b06d2f, type: 3}
+  m_PrefabInstance: {fileID: 5966926425100644844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &5966926425100644850 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 9209043892830037045, guid: f059f73e7a3a9fa4b82121a7e9b06d2f, type: 3}
+  m_PrefabInstance: {fileID: 5966926425100644844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5966926425100644851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5966926425100644849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45422b7a3fb35324c888685c9a84356e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NeoMantra2026.Scrips.LightDirectionHelper
+  lightProxy: {fileID: 225528387}
+  targetRenderer: {fileID: 5966926425100644850}
+  materialIndex: 0
+  invertDirection: 1
   drawGizmo: 1
+  savedDefault: {x: 1, y: 1, z: 0, w: 0}
+  hasSavedDefault: 1
 --- !u!4 &5985141115031096151
 Transform:
   m_ObjectHideFlags: 0

@@ -13,9 +13,10 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _ALPHATEST_ON
+  - _USE_SHADOW_CELL
+  m_InvalidKeywords:
   - _RECEIVE_SHADOW
   - _SHADOW
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -85,7 +86,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ShadowColorTexture:
-        m_Texture: {fileID: 2800000, guid: 7272a13d4f9d33d498e42ea5ebdcf6c8, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -114,6 +115,7 @@ Material:
     - _AlphaClip: 1
     - _AlphaToMask: 1
     - _BaseMapColorPower: 1
+    - _BaseMapSaturation: 1
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
@@ -121,28 +123,37 @@ Material:
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
+    - _Custom_Light_Direction: 1
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
+    - _FakeLightDirectionByCamera: 0
+    - _FakeLightFollowObject: 1
+    - _FakeLightIntensity: 1
+    - _Fake_Light_Direction: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Hardness: 1
     - _IsBaseMap: 0
+    - _LightPitchOffset: 0
+    - _LightYawOffset: 0
+    - _MaxPitch: 60
     - _Metallic: 0
     - _NORMALMAP: 0
     - _NormalMapStrength: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.005
+    - _PitchOffset: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RECEIVE_SHADOW: 1
     - _ReceiveShadow: 1
     - _ReceiveShadows: 1
-    - _Receive_Shadow: 1
+    - _Receive_Shadow: 0
     - _SHADOW: 1
     - _SHADOW_COLOR_TEXTURE: 0
     - _ShadowColorIntensity: 1
@@ -156,18 +167,26 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
+    - _USE_Light_Offset: 0
     - _USE_SDF: 0
+    - _USE_SHADOW: 1
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
+    - _YawOffset: 0
     - _ZTest: 4
     - _ZWrite: 1
     - _ZWriteControl: 0
+    - _p: 0
+    - _y: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FaceForward: {r: 0, g: 0, b: 1, a: 0}
+    - _FaceRight: {r: 1, g: 0, b: 0, a: 0}
+    - _FakeLightDirection: {r: 0.8691971, g: -0, b: -0.4944657, a: 0}
+    - _ShadowColor: {r: 0, g: 0.23584908, b: 0.21159522, a: 1}
     - _ShadowColorTextureTint: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
