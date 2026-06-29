@@ -69,7 +69,31 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _EmissionMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MatCapMask1st:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MatCapMask2nd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MatCapTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MatCapTexture1st:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MatCapTexture2nd:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -119,11 +143,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _: 0
     - _AMBIENT_OCCLUSION: 0
     - _AOStrength: 1
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
+    - _Ambient_Occlusion: 0
+    - _BaseColorContribution: 0
     - _BaseMapColorPower: 1
     - _BaseMapSaturation: 1
     - _Blend: 0
@@ -139,6 +166,9 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
+    - _Emission: 0
+    - _EmissionIntensity: 1
+    - _EmissionPower: 1
     - _EnvironmentReflections: 1
     - _FAKE_LIGHT_DIRECTION: 0
     - _FakeLightDirectionByCamera: 0
@@ -151,6 +181,15 @@ Material:
     - _Hardness: 1
     - _LightPitchOffset: 0
     - _LightYawOffset: 0
+    - _MAT_CAP_1ST: 0
+    - _MAT_CAP_2ND: 0
+    - _MatCapMode1st: 0
+    - _MatCapMode2nd: 0
+    - _MatCapStrength1st: 1
+    - _MatCapStrength2nd: 1
+    - _Mat_Cap_1: 0
+    - _Mat_Cap_1st: 0
+    - _Mat_Cap_2nd: 0
     - _MaxPitch: 60
     - _Metallic: 0
     - _NORMALMAP: 0
@@ -160,10 +199,22 @@ Material:
     - _PitchOffset: 0
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _RAC: 0
     - _RECEIVE_SHADOW: 0
     - _ReceiveShadow: 1
     - _ReceiveShadows: 1
     - _Receive_Shadow: 0
+    - _RimColorPower: 1
+    - _RimDirectionAmount: 0
+    - _RimInLight: 1
+    - _RimInShadow: 1
+    - _RimIntensity: 1
+    - _RimLightColorAffect: 0
+    - _RimPower: 1
+    - _RimSoftness: 0
+    - _RimWidth: 0.5
+    - _Rim_In_Light: 1
+    - _Rim_In_Shadow: 1
     - _SHADOW: 1
     - _SHADOWSS: 0
     - _SHADOW_COLOR_TEXTURE: 0
@@ -176,8 +227,11 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
+    - _StageIsBefore: 0
     - _Surface: 0
-    - _USE_Light_Offset: 1
+    - _USE_EMISSION: 0
+    - _USE_Light_Offset: 0
+    - _USE_Rim_Light: 0
     - _USE_SDF: 1
     - _USE_SHADOW: 2
     - _WorkflowMode: 1
@@ -198,8 +252,10 @@ Material:
     - _FakeLightDirection: {r: 1, g: 0, b: 0, a: 0}
     - _LightDirection: {r: 0, g: 0, b: 0, a: 0}
     - _LightOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowColor: {r: 1, g: 0.2971698, b: 0.2971698, a: 1}
     - _ShadowColorTextureTint: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - __1: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

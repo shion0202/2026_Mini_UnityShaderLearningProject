@@ -269,6 +269,20 @@
             },
             "m_InputSlot": {
                 "m_Node": {
+                    "m_Id": "76cf851b97e44cdb9d185614114f0840"
+                },
+                "m_SlotId": 5
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "e3c11969a39949bc8e5d01c7038d6ca2"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
                     "m_Id": "a6a6401983f1460298ef0e28fd02d039"
                 },
                 "m_SlotId": 2
@@ -760,6 +774,22 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "477368cfb64e489589b37de00e5ef128",
+    "m_Id": 5,
+    "m_DisplayName": "ShadowMask",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "ShadowMask",
+    "m_StageCapability": 3,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": [],
+    "m_LiteralMode": false
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
     "m_ObjectId": "47c2ffe43bf14eb187b582f501494198",
     "m_Id": 0,
@@ -1138,6 +1168,9 @@
     "m_Slots": [
         {
             "m_Id": "a4909edac4b240ca9c560b957346503c"
+        },
+        {
+            "m_Id": "477368cfb64e489589b37de00e5ef128"
         }
     ],
     "synonyms": [],
@@ -1452,8 +1485,8 @@
     "m_ObjectId": "be4afb2faf404da7b77c2c0882984421",
     "m_Title": "Width",
     "m_Position": {
-        "x": -728.0000610351563,
-        "y": 84.00004577636719
+        "x": -728.0,
+        "y": 84.0
     }
 }
 
