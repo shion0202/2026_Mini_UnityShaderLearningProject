@@ -41,6 +41,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AOTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -65,11 +69,19 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _EmissionGradientTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HeightMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -113,8 +125,16 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _RimTextureMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SDFTexture:
         m_Texture: {fileID: 2800000, guid: 46a4283953986e34ba23d6955f28693c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SGRimLight_cffee61529fc464f925e328b26993e43_4_658310099_Texture2D:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_2ad4be578ba1475f9f8e20a747e76b6e_Texture_1_Texture2D:
@@ -145,6 +165,7 @@ Material:
     m_Floats:
     - _: 0
     - _AMBIENT_OCCLUSION: 0
+    - _AOLitAmbient: 0.2
     - _AOStrength: 1
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
@@ -167,8 +188,13 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _Emission: 0
+    - _EmissionBlinkDepth: 0
+    - _EmissionBlinkSpeed: 1
+    - _EmissionGradientAmount: 0
+    - _EmissionGradientSpeed: 1
     - _EmissionIntensity: 1
     - _EmissionPower: 1
+    - _EmissionScrollSpeed: 0
     - _EnvironmentReflections: 1
     - _FAKE_LIGHT_DIRECTION: 0
     - _FakeLightDirectionByCamera: 0
@@ -196,6 +222,7 @@ Material:
     - _NormalMapStrength: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.005
+    - _ParallaxAmplitude: 0
     - _PitchOffset: 0
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -231,6 +258,7 @@ Material:
     - _Surface: 0
     - _USE_EMISSION: 0
     - _USE_Light_Offset: 0
+    - _USE_Parallax: 0
     - _USE_Rim_Light: 0
     - _USE_SDF: 1
     - _USE_SHADOW: 2
@@ -247,6 +275,8 @@ Material:
     - _BaseMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionScrollSpeed: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissionTiling: {r: 1, g: 1, b: 0, a: 0}
     - _FaceForward: {r: 0, g: 0, b: -1, a: 0}
     - _FaceRight: {r: 1, g: 0, b: 0, a: 0}
     - _FakeLightDirection: {r: 1, g: 0, b: 0, a: 0}
