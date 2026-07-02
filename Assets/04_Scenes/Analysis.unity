@@ -225,61 +225,12 @@ Transform:
   m_GameObject: {fileID: 225528383}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.5027595, z: -0, w: 0.86442626}
-  m_LocalPosition: {x: -0.553, y: 1.081, z: -0.149}
+  m_LocalPosition: {x: -0.553, y: 1.647, z: -0.149}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -60.365, z: 0}
---- !u!1 &469246026
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 469246027}
-  - component: {fileID: 469246028}
-  m_Layer: 0
-  m_Name: HeadCenter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &469246027
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 469246026}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.096, y: 0.007, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5966926425100644849}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &469246028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 469246026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4910b41c0f4bb5c4f8ce63fe9268f3e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NeoMantra2026.Scripts.HeadCenterHelper
-  headPivot: {fileID: 469246027}
-  targetRenderer: {fileID: 5966926425100644851}
-  materialIndex: 0
-  drawGizmo: 1
-  gizmoRadius: 0.11
 --- !u!1 &691397935
 GameObject:
   m_ObjectHideFlags: 0
@@ -4229,7 +4180,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6098924145076851180, guid: ce526c1c9fb032a44a27647395133367, type: 3}
+  - {fileID: 2100000, guid: 0d6ff3547b9f4ee45a8be12a578934c9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5901,10 +5852,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 08189944243ce324f9df3844e4d1ff67, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2517050529814853947, guid: f059f73e7a3a9fa4b82121a7e9b06d2f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 469246027}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3955317637860286465, guid: f059f73e7a3a9fa4b82121a7e9b06d2f, type: 3}
       insertIndex: -1
@@ -5943,16 +5891,6 @@ MonoBehaviour:
   invertForward: 0
   invertRight: 1
   drawGizmo: 0
---- !u!4 &5966926425100644849 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2517050529814853947, guid: f059f73e7a3a9fa4b82121a7e9b06d2f, type: 3}
-  m_PrefabInstance: {fileID: 5966926425100644844}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &5966926425100644851 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 94547661589975516, guid: f059f73e7a3a9fa4b82121a7e9b06d2f, type: 3}
-  m_PrefabInstance: {fileID: 5966926425100644844}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5985141115031096151
 Transform:
   m_ObjectHideFlags: 0

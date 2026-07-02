@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Coffee.UIEffect::Coffee.UIEffects.UIEffectProjectSettings
   m_PreLoadSettingsInBuild: 1
   m_RuntimePresets: []
-  m_RuntimePresetsV2: []
+  m_RuntimePresetsV2:
+  - {fileID: 11400000, guid: 9ec3dfbd3ff85b949805d7f28200ec94, type: 2}
+  - {fileID: 11400000, guid: 94313cd6018dc634b8fac33f164165fa, type: 2}
+  - {fileID: 11400000, guid: e453f3f7956e316418655ee73599fe7d, type: 2}
   m_UseHDRColorPicker: 1
   m_ShaderVariantCollection: {fileID: 0}
   m_ShaderVariantRegistry:

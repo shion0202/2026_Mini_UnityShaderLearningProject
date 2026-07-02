@@ -308,7 +308,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionScrollSpeed: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionTiling: {r: 1, g: 1, b: 0, a: 0}
-    - _FaceForward: {r: 0, g: 0, b: 1, a: 0}
+    - _FaceForward: {r: 0, g: 0, b: -1, a: 0}
     - _FaceRight: {r: 1, g: 0, b: 0, a: 0}
     - _FakeLightDirection: {r: 1, g: 0, b: 0, a: 0}
     - _HeadCenter: {r: 0, g: 0, b: 0, a: 0}

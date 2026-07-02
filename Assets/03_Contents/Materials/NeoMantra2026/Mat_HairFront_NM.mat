@@ -33,6 +33,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AOTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -46,8 +50,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AngelRingTexture:
-        m_Texture: {fileID: 2800000, guid: 786cbd94e1e354a48a31dc80840a9f79, type: 3}
-        m_Scale: {x: 0.76, y: 1}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: a845b1bdff3ea86449c63f0be32802c8, type: 3}
@@ -120,14 +124,16 @@ Material:
     - _AlphaClip: 1
     - _AlphaToMask: 1
     - _Ambient_Occlusion: 0
-    - _AngelRingPower: -2.02
-    - _AngelRingThreshold: 0
+    - _AngelRingPower: 80
+    - _AngelRingShift: 0
+    - _AngelRingShiftStrength: 0.2
+    - _AngelRingThreshold: 0.5
     - _AngelRingWidth: 0.001
     - _AngleRingHeight: 0.305
     - _AngleRingIntensity: 1
     - _AngleRingPower: 4
     - _AngleRingShift: -0.27
-    - _AngleRingSoftness: 0.177
+    - _AngleRingSoftness: 0.8
     - _BaseColorContribution: 0
     - _BaseMapColorPower: 1
     - _BaseMapSaturation: 1
@@ -173,7 +179,7 @@ Material:
     - _RimWidth: 0.2
     - _SHADOW_COLOR_TEXTURE: 1
     - _ShadowColorIntensity: 1
-    - _ShadowColorTextureIntensity: 6
+    - _ShadowColorTextureIntensity: 5
     - _ShadowIntensity: 1
     - _ShadowThreshold: 0.5
     - _ShiftNoiseIntensity: 0.206
@@ -195,8 +201,8 @@ Material:
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
-    - _AngelRingColor: {r: 1, g: 0, b: 0, a: 1}
-    - _BaseMapColor: {r: 0, g: 0, b: 0, a: 1}
+    - _AngelRingColor: {r: 0, g: 0, b: 1, a: 1}
+    - _BaseMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionScrollSpeed: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionTiling: {r: 1, g: 1, b: 0, a: 0}

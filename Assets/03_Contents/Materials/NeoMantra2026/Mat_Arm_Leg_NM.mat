@@ -33,9 +33,21 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AOTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 2.56, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AngelRingMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AngelRingTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: 944e4726bc439a048916e1e02e4903fb, type: 3}
@@ -156,6 +168,11 @@ Material:
     - _AlphaClip: 1
     - _AlphaToMask: 1
     - _Ambient_Occlusion: 0
+    - _AngelRingPower: 12
+    - _AngelRingShiftStrength: 0.2
+    - _AngelRingThreshold: 0.3
+    - _AngleRingIntensity: 1
+    - _AngleRingSoftness: 0.1
     - _BaseColorContribution: 1
     - _BaseMapColorPower: 1
     - _BaseMapSaturation: 1
@@ -233,6 +250,7 @@ Material:
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecualrSoftness: 0.08
+    - _SpecularColorAffect: 0
     - _SpecularHighlights: 1
     - _SpecularIntensity: 1
     - _SpecularPower: 24
@@ -240,6 +258,7 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
+    - _USE_Angel_Ring: 0
     - _USE_EMISSION: 1
     - _USE_Light_Offset: 0
     - _USE_Parallax: 0
@@ -256,6 +275,7 @@ Material:
     - _p: 0
     - _y: 0
     m_Colors:
+    - _AngelRingColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
@@ -265,6 +285,7 @@ Material:
     - _FaceForward: {r: 0, g: 0, b: 1, a: 0}
     - _FaceRight: {r: 1, g: 0, b: 0, a: 0}
     - _FakeLightDirection: {r: 1, g: 1, b: 0, a: 0}
+    - _HeadCenter: {r: 0, g: 0, b: 0, a: 0}
     - _RimColor: {r: 0.23985404, g: 0.6603774, b: 0.6603774, a: 1}
     - _ShadowColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowColorTextureTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}

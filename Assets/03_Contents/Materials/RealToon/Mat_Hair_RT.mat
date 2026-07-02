@@ -80,7 +80,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _GlossTexture:
         m_Texture: {fileID: 2800000, guid: 786cbd94e1e354a48a31dc80840a9f79, type: 3}
-        m_Scale: {x: 1.11, y: 1}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MCap:
         m_Texture: {fileID: 0}
@@ -204,7 +204,7 @@ Material:
     - _GlossMapScale: 0
     - _GlossSoftness: 0
     - _GlossTextureFollowLight: 0
-    - _GlossTextureFollowObjectRotation: 0
+    - _GlossTextureFollowObjectRotation: 1
     - _GlossTextureRotate: 0
     - _GlossTextureSoftness: 0
     - _Glossiness: 0.563
