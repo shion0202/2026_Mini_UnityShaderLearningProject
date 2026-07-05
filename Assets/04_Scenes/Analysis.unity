@@ -184,7 +184,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: e1d0b43e25a700f48ad62bb8df01bd50, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -224,13 +224,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225528383}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.5027595, z: -0, w: 0.86442626}
-  m_LocalPosition: {x: -0.553, y: 1.647, z: -0.149}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.553, y: 0.962, z: -0.149}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -60.365, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &691397935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,13 +1469,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786443505}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.3036032, y: 0.5624222, z: -0.23296289, w: 0.73296297}
+  m_LocalRotation: {x: 0.33141357, y: 0.46193978, z: -0.19134171, w: 0.8001032}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 45, y: 75, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 60, z: 0}
 --- !u!114 &1786443508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5854,6 +5854,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7024270678726335108, guid: f059f73e7a3a9fa4b82121a7e9b06d2f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5966926425100644851}
     - targetCorrespondingSourceObject: {fileID: 3955317637860286465, guid: f059f73e7a3a9fa4b82121a7e9b06d2f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5966926425100644848}
@@ -5891,6 +5894,32 @@ MonoBehaviour:
   invertForward: 0
   invertRight: 1
   drawGizmo: 0
+--- !u!1 &5966926425100644849 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7024270678726335108, guid: f059f73e7a3a9fa4b82121a7e9b06d2f, type: 3}
+  m_PrefabInstance: {fileID: 5966926425100644844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &5966926425100644850 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2298894987647697229, guid: f059f73e7a3a9fa4b82121a7e9b06d2f, type: 3}
+  m_PrefabInstance: {fileID: 5966926425100644844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5966926425100644851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5966926425100644849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45422b7a3fb35324c888685c9a84356e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NeoMantra2026.Scripts.LightDirectionHelper
+  referenceProxy: {fileID: 5966926425100644845}
+  targetRenderer: {fileID: 5966926425100644850}
+  materialIndex: 0
+  drawGizmo: 1
 --- !u!4 &5985141115031096151
 Transform:
   m_ObjectHideFlags: 0

@@ -1,86 +1,63 @@
-﻿using UnityEngine;
+using UnityEngine;
 
-namespace NeoMantra2026.Scrips
+namespace NeoMantra2026.Scripts
 {
+    // 커스텀 라이트의 '오브젝트 기준 방향'용 프레임 공급 헬퍼.
+    // referenceProxy(캐릭터 정면 정렬 Transform)의 축을 셰이더에 넣어, _FakeLightEuler 각도를
+    // 그 축 기준으로 재해석시킨다(= 캐릭터가 회전하면 빛도 같은 상대각으로 따라 회전).
+    // 컴포넌트 비활성 시 항등축 복원 → 월드 기준으로 되돌아감. SDFHelper와 동일 구조.
     [ExecuteAlways]
     [AddComponentMenu("NeoMantra2026/Light Direction Helper")]
     public class LightDirectionHelper : MonoBehaviour
     {
         [Header("References")]
-        [SerializeField, Tooltip("빛 방향 기준 오브젝트. 비우면 자신.")] private Transform lightProxy;
+        [SerializeField, Tooltip("캐릭터 정면 프레임 Transform(리그 보정용 정렬 빈 오브젝트 권장). forward/right/up이 커스텀 라이트 각도의 기준 축이 됨. 비우면 자신.")] private Transform referenceProxy;
         [SerializeField, Tooltip("대상 렌더러. 비우면 자식에서 탐색.")] private Renderer targetRenderer;
         [SerializeField, Tooltip("렌더러에서 적용할 머티리얼 번호.")] private int materialIndex = 0;
 
-        [Header("방향 보정")]
-        [SerializeField, Tooltip("빛 방향 반전.")] private bool invertDirection = false;
-
         [Header("Debug")]
-        [SerializeField, Tooltip("Right Direction(노랑) 확인용.")] private bool drawGizmo = true;
+        [SerializeField, Tooltip("기준 축(파랑=forward/빨강=right/초록=up) 확인용.")] private bool drawGizmo = true;
 
-        private string directionProperty = "_FakeLightDirection";
-        private string toggleProperty = "_FakeLightFollowObject";
-        private float onValue = 1f;
+        private const string ForwardProperty = "_FakeLightRefForward";
+        private const string RightProperty   = "_FakeLightRefRight";
+        private const string UpProperty      = "_FakeLightRefUp";
+        private static readonly Vector4 DefaultForward = new Vector4(0f, 0f, 1f, 0f);
+        private static readonly Vector4 DefaultRight   = new Vector4(1f, 0f, 0f, 0f);
+        private static readonly Vector4 DefaultUp      = new Vector4(0f, 1f, 0f, 0f);
 
-        [SerializeField, HideInInspector] private Vector4 savedDefault = new Vector4(0, 0, 1, 0);
-        [SerializeField, HideInInspector] private bool hasSavedDefault = false;
+        private Material _matInstance; // 런타임 인스턴스 캐시
+        private Material _lastWritten; // 복원 대상(에디터 공유 머티리얼용)
 
-        private Material _matInstance;
-        private Material _sharedTouched; // 에디터에서 값을 쓴 공유 머티리얼 (복원 추적)
-        private bool _wasOverriding = false;
+        [ContextMenu("Apply Forced")]
+        private void ApplyNow() { _matInstance = null; Apply(); }
 
         private void OnEnable() { Apply(); }
-        private void LateUpdate() { Apply(); }
         private void OnValidate() { _matInstance = null; Apply(); }
+        private void LateUpdate() { Apply(); }
+
         private void OnDisable()
         {
-            if (_sharedTouched != null && hasSavedDefault)
-            {
-                _sharedTouched.SetVector(directionProperty, savedDefault);
-            }
-                
-            _sharedTouched = null;
+            RestoreDefault(_lastWritten);
+            _lastWritten = null;
             _matInstance = null;
-            _wasOverriding = false;
         }
 
         private void Apply()
         {
             Material mat = ResolveMaterial(out bool isSharedAsset);
+            Material restoreTarget = isSharedAsset ? mat : null;
+
+            if (_lastWritten != restoreTarget)
+            {
+                RestoreDefault(_lastWritten);
+                _lastWritten = restoreTarget;
+            }
+
             if (mat == null) return;
-
-            bool drive = string.IsNullOrEmpty(toggleProperty) || (mat.HasProperty(toggleProperty) && Mathf.Abs(mat.GetFloat(toggleProperty) - onValue) < 0.5f);
-
-            if (drive)
-            {
-                // 초기값이 아직 없으면(등록 직후) 현재 값을 캡처
-                if (!hasSavedDefault)
-                {
-                    savedDefault = mat.GetVector(directionProperty);
-                    hasSavedDefault = true;
-                }
-                Transform t = lightProxy ? lightProxy : transform;
-                Vector3 dir = t.forward * (invertDirection ? -1f : 1f);
-                mat.SetVector(directionProperty, dir);
-
-                _wasOverriding = true;
-                _sharedTouched = isSharedAsset ? mat : null;
-            }
-            else
-            {
-                if (_wasOverriding)
-                {
-                    // Off로 전환한 직후 → 초기값 복원
-                    mat.SetVector(directionProperty, savedDefault);
-                    _wasOverriding = false;
-                }
-                else
-                {
-                    // Off 상태: 유저가 만진 현재 값을 초기값으로 실시간 캡처
-                    savedDefault = mat.GetVector(directionProperty);
-                    hasSavedDefault = true;
-                }
-                _sharedTouched = null; // off일 땐 원본 값을 오염시키지 않음
-            }
+            Transform t = referenceProxy ? referenceProxy : transform;
+            mat.SetVector(ForwardProperty, t.forward);
+            mat.SetVector(RightProperty, t.right);
+            mat.SetVector(UpProperty, t.up);
         }
 
         private Material ResolveMaterial(out bool isSharedAsset)
@@ -95,9 +72,7 @@ namespace NeoMantra2026.Scrips
                 {
                     var mats = targetRenderer.materials;
                     if (materialIndex >= 0 && materialIndex < mats.Length)
-                    {
                         _matInstance = mats[materialIndex];
-                    }
                 }
                 isSharedAsset = false;
                 return _matInstance;
@@ -106,21 +81,25 @@ namespace NeoMantra2026.Scrips
             isSharedAsset = true;
             var smats = targetRenderer.sharedMaterials;
             if (materialIndex >= 0 && materialIndex < smats.Length)
-            {
                 return smats[materialIndex];
-            }
             return null;
+        }
+
+        private void RestoreDefault(Material mat)
+        {
+            if (mat == null) return;
+            mat.SetVector(ForwardProperty, DefaultForward);
+            mat.SetVector(RightProperty, DefaultRight);
+            mat.SetVector(UpProperty, DefaultUp);
         }
 
         private void OnDrawGizmosSelected()
         {
             if (!drawGizmo) return;
-
-            Transform t = lightProxy ? lightProxy : transform;
-            Vector3 dir = t.forward * (invertDirection ? -1f : 1f);
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawLine(t.position, t.position + dir * 0.5f);
-            Gizmos.DrawWireSphere(t.position + dir * 0.5f, 0.05f);
+            Transform t = referenceProxy ? referenceProxy : transform;
+            Gizmos.color = Color.blue;  Gizmos.DrawLine(t.position, t.position + t.forward * 0.3f);
+            Gizmos.color = Color.red;   Gizmos.DrawLine(t.position, t.position + t.right * 0.3f);
+            Gizmos.color = Color.green; Gizmos.DrawLine(t.position, t.position + t.up * 0.3f);
         }
     }
 }

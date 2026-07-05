@@ -61,6 +61,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _BacklightThicknessMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: 65c663f404a67374b8c0e531adce0f9a, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -188,11 +192,15 @@ Material:
     - _AlphaToMask: 0
     - _Ambient_Occlusion: 0
     - _AngelRingPower: 12
+    - _AngelRingShift: 0
     - _AngelRingThreshold: 0.5
     - _AngleRingIntensity: 1
     - _AngleRingPower: 80
     - _AngleRingShift: 0
     - _AngleRingSoftness: 0.05
+    - _BacklightDistortion: 0.2
+    - _BacklightIntensity: 1
+    - _BacklightPower: 3
     - _BaseColorContribution: 0
     - _BaseMapColorPower: 1
     - _BaseMapSaturation: 1
@@ -222,6 +230,9 @@ Material:
     - _FakeLightDirectionByCamera: 0
     - _FakeLightFollowObject: 0
     - _FakeLightIntensity: 1
+    - _FakeLightRefForward: 0
+    - _FakeLightRefRight: 0
+    - _FakeLightRefUp: 0
     - _Fake_Light_Direction: 0
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -285,6 +296,7 @@ Material:
     - _StageIsBefore: 0
     - _Surface: 0
     - _USE_Angel_Ring: 0
+    - _USE_Backlight: 0
     - _USE_EMISSION: 0
     - _USE_Light_Offset: 0
     - _USE_Parallax: 0
@@ -302,6 +314,7 @@ Material:
     - _y: 0
     m_Colors:
     - _AngelRingColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BacklightColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
@@ -310,7 +323,10 @@ Material:
     - _EmissionTiling: {r: 1, g: 1, b: 0, a: 0}
     - _FaceForward: {r: 0, g: 0, b: -1, a: 0}
     - _FaceRight: {r: 1, g: 0, b: 0, a: 0}
-    - _FakeLightDirection: {r: 1, g: 0, b: 0, a: 0}
+    - _FakeLightDirection: {r: 0, g: 0, b: 0, a: 0}
+    - _FakeLightRefForward: {r: 0, g: 0, b: 1, a: 0}
+    - _FakeLightRefRight: {r: 1, g: 0, b: 0, a: 0}
+    - _FakeLightRefUp: {r: 0, g: 1, b: 0, a: 0}
     - _HeadCenter: {r: 0, g: 0, b: 0, a: 0}
     - _LightDirection: {r: 0, g: 0, b: 0, a: 0}
     - _LightOffset: {r: 0, g: 0, b: 0, a: 0}
