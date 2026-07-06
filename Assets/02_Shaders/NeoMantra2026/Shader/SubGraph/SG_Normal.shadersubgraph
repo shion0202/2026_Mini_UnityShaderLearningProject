@@ -54,6 +54,9 @@
         },
         {
             "m_Id": "f77321e9797441308443af5324b2d585"
+        },
+        {
+            "m_Id": "d1a87822ddd241cd9b490bfdcf8fdc9c"
         }
     ],
     "m_GroupDatas": [],
@@ -155,6 +158,20 @@
                     "m_Id": "7a24cb69a975426999e081b1ca5103db"
                 },
                 "m_SlotId": 2
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "d1a87822ddd241cd9b490bfdcf8fdc9c"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "79041bce1e224e4abfd2a10302ae27c2"
+                },
+                "m_SlotId": 3
             }
         },
         {
@@ -871,6 +888,19 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.SamplerStateMaterialSlot",
+    "m_ObjectId": "7edc9b517c2241ed8e526d4d6b7a3aad",
+    "m_Id": 0,
+    "m_DisplayName": "Out",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_BareResource": false
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "8921517c44104fcfbf2453b6e69b25c1",
     "m_Id": 0,
@@ -1131,6 +1161,42 @@
     "m_Keyword": {
         "m_Id": "3b781bb0298b497e9d9b746e39129a59"
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.SamplerStateNode",
+    "m_ObjectId": "d1a87822ddd241cd9b490bfdcf8fdc9c",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Sampler State",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -727.0,
+            "y": -5.0,
+            "width": 145.0,
+            "height": 136.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "7edc9b517c2241ed8e526d4d6b7a3aad"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_filter": 0,
+    "m_wrap": 0,
+    "m_aniso": 0
 }
 
 {

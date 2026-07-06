@@ -41,6 +41,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _AlphaMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AngelRingMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -50,6 +54,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AngelRingTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BacklightThicknessMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -123,9 +131,10 @@ Material:
     - _AOStrength: 1
     - _AlphaClip: 1
     - _AlphaToMask: 1
+    - _AlphaValue: 1
     - _Ambient_Occlusion: 0
     - _AngelRingPower: 80
-    - _AngelRingShift: 0
+    - _AngelRingShift: 0.2
     - _AngelRingShiftStrength: 0.2
     - _AngelRingThreshold: 0.5
     - _AngelRingWidth: 0.001
@@ -134,13 +143,21 @@ Material:
     - _AngleRingPower: 4
     - _AngleRingShift: -0.27
     - _AngleRingSoftness: 0.8
+    - _BacklightAmbient: 0
+    - _BacklightBaseColorTint: 0
+    - _BacklightDistortion: 0.2
+    - _BacklightIntensity: 1
+    - _BacklightLightColorAffect: 1
+    - _BacklightPower: 3
+    - _BacklightShadowGate: 0
     - _BaseColorContribution: 0
     - _BaseMapColorPower: 1
     - _BaseMapSaturation: 1
     - _Blend: 0
     - _CastShadows: 1
     - _Cull: 2
-    - _Custom_Light_Direction: 1
+    - _Curoff: 0.5
+    - _Custom_Light_Direction: 0
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _Emission: 0
@@ -192,16 +209,20 @@ Material:
     - _SrcBlendAlpha: 1
     - _Surface: 0
     - _USE_Angel_Ring: 1
+    - _USE_Backlight: 0
     - _USE_Light_Offset: 0
     - _USE_Parallax: 0
     - _USE_Rim_Light: 0
+    - _USE_SDF: 0
     - _USE_SHADOW: 1
     - _USE_Specular: 0
+    - _UseBaseAlpha: 0
     - _ZTest: 4
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
     - _AngelRingColor: {r: 0, g: 0, b: 1, a: 1}
+    - _BacklightColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionScrollSpeed: {r: 0, g: 0, b: 0, a: 0}
@@ -209,6 +230,9 @@ Material:
     - _FaceForward: {r: 0, g: 0, b: 1, a: 0}
     - _FaceRight: {r: 1, g: 0, b: 0, a: 0}
     - _FakeLightDirection: {r: 0, g: 0, b: -1, a: 0}
+    - _FakeLightRefForward: {r: 0, g: 0, b: 1, a: 0}
+    - _FakeLightRefRight: {r: 1, g: 0, b: 0, a: 0}
+    - _FakeLightRefUp: {r: 0, g: 1, b: 0, a: 0}
     - _HeadCenter: {r: 0, g: 0, b: 0, a: 0}
     - _RimColor: {r: 0.13286836, g: 0.93011117, b: 1, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}

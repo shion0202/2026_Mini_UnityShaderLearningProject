@@ -887,7 +887,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "19f1926437004c77a740f98e6e1ceeb0",
     "m_Id": 0,
-    "m_DisplayName": "MatCapMask",
+    "m_DisplayName": "MatCap Mask",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -969,31 +969,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
-    "m_ObjectId": "1de28ab3d1ae49bdb368dc544e76ce63",
-    "m_Id": 2,
-    "m_DisplayName": "OutColor",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "OutColor",
-    "m_StageCapability": 3,
-    "m_Value": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 0.0
-    },
-    "m_DefaultValue": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 0.0
-    },
-    "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.MultiplyNode",
     "m_ObjectId": "214153e570d14f5da8d1f49939588699",
     "m_Group": {
@@ -1041,8 +1016,8 @@
     "m_ObjectId": "25f4d98193ca426e9a763c499f16a59c",
     "m_Title": "Add",
     "m_Position": {
-        "x": -1425.0,
-        "y": -87.0
+        "x": -1424.9998779296875,
+        "y": -87.00007629394531
     }
 }
 
@@ -1308,6 +1283,31 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "3a60e8275c604ba1aaf24dc644a6c482",
+    "m_Id": 2,
+    "m_DisplayName": "MatCapColor",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "MatCapColor",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
     "m_ObjectId": "3c9f552f24cd4be28f2bea7dbb30a019",
     "m_Id": 1,
@@ -1549,7 +1549,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "48fb53027dec49d3a8f1c48b330fb405",
     "m_Id": 0,
-    "m_DisplayName": "MatCapColor",
+    "m_DisplayName": "MatCap Color",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1743,7 +1743,7 @@
     },
     "m_Slots": [
         {
-            "m_Id": "1de28ab3d1ae49bdb368dc544e76ce63"
+            "m_Id": "3a60e8275c604ba1aaf24dc644a6c482"
         }
     ],
     "synonyms": [],
@@ -1815,7 +1815,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "64cc3bb8b9274758aa10e8b557437e2b",
     "m_Id": 0,
-    "m_DisplayName": "InColor",
+    "m_DisplayName": "In Color",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1845,10 +1845,10 @@
     "promotedFromAssetID": "",
     "promotedFromCategoryName": "",
     "promotedOrdering": -1,
-    "m_Name": "MatCapMask",
+    "m_Name": "MatCap Mask",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "MatCapMask",
-    "m_DefaultReferenceName": "_MatCapMask",
+    "m_RefNameGeneratedByDisplayName": "MatCap Mask",
+    "m_DefaultReferenceName": "_MatCap_Mask",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -2077,10 +2077,10 @@
     "promotedFromAssetID": "",
     "promotedFromCategoryName": "",
     "promotedOrdering": -1,
-    "m_Name": "MatCapColor",
+    "m_Name": "MatCap Color",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "MatCapColor",
-    "m_DefaultReferenceName": "_MatCapColor",
+    "m_RefNameGeneratedByDisplayName": "MatCap Color",
+    "m_DefaultReferenceName": "_MatCap_Color",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -2185,10 +2185,10 @@
     "promotedFromAssetID": "",
     "promotedFromCategoryName": "",
     "promotedOrdering": -1,
-    "m_Name": "StageIsBefore",
+    "m_Name": "Stage Is Before",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "StageIsBefore",
-    "m_DefaultReferenceName": "_StageIsBefore",
+    "m_RefNameGeneratedByDisplayName": "Stage Is Before",
+    "m_DefaultReferenceName": "_Stage_Is_Before",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -2429,7 +2429,7 @@
     "m_Type": "UnityEditor.ShaderGraph.BooleanMaterialSlot",
     "m_ObjectId": "bb1f5e69c9ab47299cf1ba7dd5ddccbd",
     "m_Id": 0,
-    "m_DisplayName": "StageIsBefore",
+    "m_DisplayName": "Stage Is Before",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -2493,7 +2493,7 @@
     "m_ObjectId": "be87422231a245eea98090f956d9d486",
     "m_Title": "Multiply",
     "m_Position": {
-        "x": -1578.0,
+        "x": -1577.9998779296875,
         "y": -959.0
     }
 }
@@ -3059,10 +3059,10 @@
     "promotedFromAssetID": "",
     "promotedFromCategoryName": "",
     "promotedOrdering": -1,
-    "m_Name": "InColor",
+    "m_Name": "In Color",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "InColor",
-    "m_DefaultReferenceName": "_InColor",
+    "m_RefNameGeneratedByDisplayName": "In Color",
+    "m_DefaultReferenceName": "_In_Color",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,

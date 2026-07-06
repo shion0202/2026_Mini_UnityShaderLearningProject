@@ -952,10 +952,10 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "3cdf5db417a443b4a904a01c82374552",
     "m_Id": 2,
-    "m_DisplayName": "EmissionColor",
+    "m_DisplayName": "EmissionGradColor",
     "m_SlotType": 1,
     "m_Hidden": false,
-    "m_ShaderOutputName": "EmissionColor",
+    "m_ShaderOutputName": "EmissionGradColor",
     "m_StageCapability": 2,
     "m_Value": {
         "x": 0.0,
@@ -1042,6 +1042,31 @@
     "m_Property": {
         "m_Id": "3983237cd36b4583a42cdef6568ce609"
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "427b53b9b6d54b57862e264220d3b64d",
+    "m_Id": 2,
+    "m_DisplayName": "Emission",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Emission",
+    "m_StageCapability": 2,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
 }
 
 {
@@ -1967,31 +1992,6 @@
 }
 
 {
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
-    "m_ObjectId": "d308f6bbea6349cb9cf0bf4250d99996",
-    "m_Id": 2,
-    "m_DisplayName": "Emission",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Emission",
-    "m_StageCapability": 2,
-    "m_Value": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 0.0
-    },
-    "m_DefaultValue": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 0.0
-    },
-    "m_Labels": []
-}
-
-{
     "m_SGVersion": 1,
     "m_Type": "UnityEditor.ShaderGraph.Internal.Vector4ShaderProperty",
     "m_ObjectId": "d3656b1e82204a93a2a3a0120b011c99",
@@ -2227,7 +2227,7 @@
     "m_Group": {
         "m_Id": ""
     },
-    "m_Name": "SG_Emission Base",
+    "m_Name": "SG_Emission_Base",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
@@ -2351,7 +2351,7 @@
     },
     "m_Slots": [
         {
-            "m_Id": "d308f6bbea6349cb9cf0bf4250d99996"
+            "m_Id": "427b53b9b6d54b57862e264220d3b64d"
         }
     ],
     "synonyms": [],
@@ -2411,10 +2411,10 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "f644fc3a7bcd4b719e19ae59b9403451",
     "m_Id": 2,
-    "m_DisplayName": "Emission",
+    "m_DisplayName": "EmissionColor",
     "m_SlotType": 1,
     "m_Hidden": false,
-    "m_ShaderOutputName": "Emission",
+    "m_ShaderOutputName": "EmissionColor",
     "m_StageCapability": 2,
     "m_Value": {
         "x": 0.0,
