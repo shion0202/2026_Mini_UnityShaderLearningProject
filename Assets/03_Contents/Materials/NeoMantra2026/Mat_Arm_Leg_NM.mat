@@ -14,12 +14,12 @@ Material:
   m_ValidKeywords:
   - _ALPHATEST_ON
   - _NORMALMAP
-  - _SHADOW_COLOR_TEXTURE
   - _USE_SHADOW_CELL
   m_InvalidKeywords:
   - _MAT_CAP_1ST
   - _RECEIVE_SHADOW
   - _SHADOW
+  - _SHADOW_COLOR_TEXTURE
   - _USE_EMISSION
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -141,8 +141,28 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ShadowAOMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ShadowColorTexture:
         m_Texture: {fileID: 2800000, guid: 944e4726bc439a048916e1e02e4903fb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadowIntensityMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadowPatternTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadowRamp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadowRampMask:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -168,9 +188,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _: 0.5
+    - _AAShadowEdge: 1.5
     - _AMBIENTOCCLUSION: 0
     - _AMBIENT_OCCLUSION: 0
     - _AOLitAmbient: 0.2
+    - _AOShadowAmbient: 1
     - _AOStrength: 1
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 1
@@ -223,6 +245,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Hardness: 1
+    - _Hardness2nd: 1
     - _IsBaseMap: 0
     - _LightPitchOffset: 0
     - _LightYawOffset: 0
@@ -231,6 +254,7 @@ Material:
     - _MatCapMode2nd: 2
     - _MatCapStrength1st: 1
     - _MatCapStrength2nd: 1
+    - _Mat_Cap: 0
     - _Mat_Cap_1st: 1
     - _Mat_Cap_2nd: 1
     - _MaxPitch: 60
@@ -246,6 +270,9 @@ Material:
     - _RAC: 0
     - _RECEIVE_SHADOW: 1
     - _ReceiveShadow: 1
+    - _ReceiveShadow2nd: 1
+    - _ReceiveShadowDepth: 0
+    - _ReceiveShadowHardness: 1
     - _ReceiveShadows: 1
     - _Receive_Shadow: 1
     - _RimColorPower: 5
@@ -260,11 +287,17 @@ Material:
     - _Rim_In_Shadow: 0
     - _SHADOW: 1
     - _SHADOW_COLOR_TEXTURE: 1
+    - _ShadowAOStrength: 1
     - _ShadowColorIntensity: 1
+    - _ShadowColorIntensity2nd: 1
     - _ShadowColorTextureIntensity: 3
     - _ShadowDarkness: 0.5
     - _ShadowIntensity: 1
+    - _ShadowPatternScale: 1
+    - _ShadowRampV: 0
     - _ShadowThreshold: 0.5
+    - _ShadowThreshold2nd: 0.25
+    - _Shadow_Color_Texture: 0
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecualrSoftness: 0.08
@@ -284,6 +317,9 @@ Material:
     - _USE_Rim_Light: 1
     - _USE_SDF: 0
     - _USE_SHADOW: 1
+    - _USE_Shadow_2nd: 0
+    - _USE_Shadow_Pattern_Texture: 0
+    - _USE_Shadow_Ramp_Mask: 0
     - _USE_Specular: 0
     - _UseBaseAlpha: 0
     - _WorkflowMode: 1
@@ -312,6 +348,7 @@ Material:
     - _HeadCenter: {r: 0, g: 0, b: 0, a: 0}
     - _RimColor: {r: 0.23985404, g: 0.6603774, b: 0.6603774, a: 1}
     - _ShadowColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ShadowColor2nd: {r: 0, g: 0, b: 0, a: 1}
     - _ShadowColorTextureTint: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}

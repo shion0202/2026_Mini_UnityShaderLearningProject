@@ -13,12 +13,12 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _ALPHATEST_ON
-  - _SHADOW_COLOR_TEXTURE
   - _USE_SHADOW_CELL
   m_InvalidKeywords:
   - _MAT_CAP_1ST
   - _RECEIVE_SHADOW
   - _SHADOW
+  - _SHADOW_COLOR_TEXTURE
   - _USE_EMISSION
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -37,6 +37,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AOTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AlphaMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -92,8 +96,28 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ShadowAOMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ShadowColorTexture:
         m_Texture: {fileID: 2800000, guid: a845b1bdff3ea86449c63f0be32802c8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadowIntensityMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadowPatternTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadowRamp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadowRampMask:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecularMask:
@@ -114,7 +138,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AAShadowEdge: 1.5
     - _AOLitAmbient: 0
+    - _AOShadowAmbient: 1
     - _AOStrength: 1
     - _AlphaClip: 1
     - _AlphaToMask: 1
@@ -139,7 +165,7 @@ Material:
     - _CastShadows: 1
     - _Cull: 2
     - _Curoff: 0.5
-    - _Custom_Light_Direction: 1
+    - _Custom_Light_Direction: 0
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _Emission: 0
@@ -156,12 +182,14 @@ Material:
     - _FakeLightRefRight: 0
     - _FakeLightRefUp: 0
     - _Hardness: 1
+    - _Hardness2nd: 1
     - _LightPitchOffset: 0
     - _LightYawOffset: 0
     - _MatCapMode1st: 1
     - _MatCapMode2nd: 0
     - _MatCapStrength1st: 1
     - _MatCapStrength2nd: 1
+    - _Mat_Cap: 0
     - _Mat_Cap_1st: 0
     - _Mat_Cap_2nd: 0
     - _NORMALMAP: 0
@@ -170,7 +198,10 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadow: 1
-    - _Receive_Shadow: 0
+    - _ReceiveShadow2nd: 1
+    - _ReceiveShadowDepth: 0
+    - _ReceiveShadowHardness: 1
+    - _Receive_Shadow: 1
     - _RimColorPower: 3
     - _RimDirectionAmount: 0
     - _RimInLight: 1
@@ -180,10 +211,16 @@ Material:
     - _RimSoftness: 0.1
     - _RimWidth: 0.2
     - _SHADOW_COLOR_TEXTURE: 1
+    - _ShadowAOStrength: 1
     - _ShadowColorIntensity: 1
+    - _ShadowColorIntensity2nd: 1
     - _ShadowColorTextureIntensity: 6
     - _ShadowIntensity: 1
+    - _ShadowPatternScale: 1
+    - _ShadowRampV: 0
     - _ShadowThreshold: 0.5
+    - _ShadowThreshold2nd: 0.25
+    - _Shadow_Color_Texture: 0
     - _SpecualrSoftness: 0.08
     - _SpecularColorAffect: 0
     - _SpecularIntensity: 1
@@ -199,6 +236,9 @@ Material:
     - _USE_Parallax: 0
     - _USE_Rim_Light: 0
     - _USE_SHADOW: 1
+    - _USE_Shadow_2nd: 0
+    - _USE_Shadow_Pattern_Texture: 0
+    - _USE_Shadow_Ramp_Mask: 0
     - _USE_Specular: 0
     - _UseBaseAlpha: 0
     - _ZTest: 4
@@ -213,12 +253,13 @@ Material:
     - _EmissionTiling: {r: 1, g: 1, b: 0, a: 0}
     - _FaceForward: {r: 0, g: 0, b: 1, a: 0}
     - _FaceRight: {r: 1, g: 0, b: 0, a: 0}
-    - _FakeLightDirection: {r: 0, g: 419.28, b: 0, a: 0}
+    - _FakeLightDirection: {r: 0, g: 0, b: 0, a: 0}
     - _FakeLightRefForward: {r: 0, g: 0, b: -1, a: 0}
     - _FakeLightRefRight: {r: -1, g: 0, b: 0, a: 0}
     - _FakeLightRefUp: {r: 0, g: 1, b: 0, a: 0}
     - _RimColor: {r: 0.13286836, g: 0.93011117, b: 1, a: 1}
-    - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ShadowColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+    - _ShadowColor2nd: {r: 0, g: 0, b: 0, a: 1}
     - _ShadowColorTextureTint: {r: 1, g: 1, b: 1, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

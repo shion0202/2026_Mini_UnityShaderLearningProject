@@ -13,9 +13,9 @@ namespace NeoMantra2026.Scripts
         [SerializeField, Tooltip("생성할 그래디언트 텍스처 색.")] private Gradient gradient = new Gradient();
 
         [Header("Texture")]
-        [SerializeField, Tooltip("텍스처 파일 이름.")] private string textureName = "GeneratedGradient";
+        [SerializeField, Tooltip("텍스처 파일 이름.")] private string textureName = "Gradient_Sample";
         [SerializeField, Min(2), Tooltip("텍스처 파일 가로 크기.")] private int width = 256;
-        [SerializeField, Min(1), Tooltip("텍스처 파일 세로 크기.")] private int height = 1;
+        [SerializeField, Min(1), Tooltip("텍스처 파일 세로 크기.")] private int height = 256;
 
         [Header("Import Options")]
         [SerializeField, Tooltip("색 램프면 ON. 데이터(마스크/커브) 램프면 OFF.")] private bool sRGB = true;

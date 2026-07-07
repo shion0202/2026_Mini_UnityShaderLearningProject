@@ -225,7 +225,7 @@ Transform:
   m_GameObject: {fileID: 225528383}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.553, y: 1.104, z: -0.149}
+  m_LocalPosition: {x: -0.464, y: 1.018, z: -0.243}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1354,14 +1354,14 @@ MonoBehaviour:
     m_ColorSpace: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  textureName: Gradient_Test
+  textureName: Gradient_Sample
   width: 256
-  height: 1
+  height: 256
   sRGB: 1
   wrapMode: 1
   filterMode: 1
   readable: 0
-  savePath: Assets/02_Contents/Texture/Gradient
+  savePath: Assets/03_Contents/Texture/Gradient
   generatedTexture: {fileID: 0}
 --- !u!4 &1414600372
 Transform:
@@ -5782,6 +5782,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 16d9c621ae1f6e047b32ac8ca846b477, type: 2}
+    - target: {fileID: 2172011680420147800, guid: f059f73e7a3a9fa4b82121a7e9b06d2f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.033
+      objectReference: {fileID: 0}
     - target: {fileID: 2298894987647697229, guid: f059f73e7a3a9fa4b82121a7e9b06d2f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 

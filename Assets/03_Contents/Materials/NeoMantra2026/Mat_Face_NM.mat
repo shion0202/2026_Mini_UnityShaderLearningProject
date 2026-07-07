@@ -25,10 +25,10 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _USE_SDF
   - _USE_SHADOW_SDF
   m_InvalidKeywords:
   - _SHADOW
+  - _USE_SDF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -46,6 +46,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AOTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AlphaMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -161,6 +165,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ShadowRamp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadowRampMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -190,6 +202,7 @@ Material:
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
+    - _AlphaValue: 1
     - _Ambient_Occlusion: 0
     - _AngelRingPower: 12
     - _AngelRingShift: 0
@@ -198,9 +211,13 @@ Material:
     - _AngleRingPower: 80
     - _AngleRingShift: 0
     - _AngleRingSoftness: 0.05
+    - _BacklightAmbient: 0
+    - _BacklightBaseColorTint: 0
     - _BacklightDistortion: 0.2
     - _BacklightIntensity: 1
+    - _BacklightLightColorAffect: 1
     - _BacklightPower: 3
+    - _BacklightShadowGate: 0
     - _BaseColorContribution: 0
     - _BaseMapColorPower: 1
     - _BaseMapSaturation: 1
@@ -211,6 +228,7 @@ Material:
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
+    - _Curoff: 0.5
     - _Custom_Light_Direction: 0
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
@@ -238,6 +256,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Hardness: 1
+    - _Hardness2nd: 1
     - _LightPitchOffset: 0
     - _LightYawOffset: 0
     - _MAT_CAP_1ST: 0
@@ -246,6 +265,7 @@ Material:
     - _MatCapMode2nd: 0
     - _MatCapStrength1st: 1
     - _MatCapStrength2nd: 1
+    - _Mat_Cap: 0
     - _Mat_Cap_1: 0
     - _Mat_Cap_1st: 0
     - _Mat_Cap_2nd: 0
@@ -262,6 +282,9 @@ Material:
     - _RAC: 0
     - _RECEIVE_SHADOW: 0
     - _ReceiveShadow: 1
+    - _ReceiveShadow2nd: 1
+    - _ReceiveShadowDepth: 0
+    - _ReceiveShadowHardness: 1
     - _ReceiveShadows: 1
     - _Receive_Shadow: 0
     - _RimColorPower: 1
@@ -279,9 +302,13 @@ Material:
     - _SHADOWSS: 0
     - _SHADOW_COLOR_TEXTURE: 0
     - _ShadowColorIntensity: 1
+    - _ShadowColorIntensity2nd: 1
     - _ShadowColorTextureIntensity: 1
     - _ShadowIntensity: 1
+    - _ShadowRampV: 0
     - _ShadowThreshold: 0.5
+    - _ShadowThreshold2nd: 0.25
+    - _Shadow_Color_Texture: 0
     - _ShiftNoiseIntensity: 0.2
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
@@ -302,8 +329,11 @@ Material:
     - _USE_Parallax: 0
     - _USE_Rim_Light: 0
     - _USE_SDF: 1
-    - _USE_SHADOW: 2
+    - _USE_SHADOW: 3
+    - _USE_Shadow_2nd: 0
+    - _USE_Shadow_Ramp_Mask: 0
     - _USE_Specular: 0
+    - _UseBaseAlpha: 0
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
     - _YawOffset: 0
@@ -331,7 +361,8 @@ Material:
     - _LightDirection: {r: 0, g: 0, b: 0, a: 0}
     - _LightOffset: {r: 0, g: 0, b: 0, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
-    - _ShadowColor: {r: 1, g: 0.2971698, b: 0.2971698, a: 1}
+    - _ShadowColor: {r: 0.103773594, g: 0.103773594, b: 0.103773594, a: 1}
+    - _ShadowColor2nd: {r: 0, g: 0, b: 0, a: 1}
     - _ShadowColorTextureTint: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
