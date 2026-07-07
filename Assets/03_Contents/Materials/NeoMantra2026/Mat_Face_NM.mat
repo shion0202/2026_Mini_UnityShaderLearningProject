@@ -161,7 +161,19 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ShadowAOMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ShadowColorTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadowIntensityMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadowPatternTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -196,8 +208,10 @@ Material:
     m_Ints: []
     m_Floats:
     - _: 0
+    - _AAShadowEdge: 1
     - _AMBIENT_OCCLUSION: 0
     - _AOLitAmbient: 0.2
+    - _AOShadowAmbient: 1
     - _AOStrength: 1
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
@@ -298,13 +312,17 @@ Material:
     - _RimWidth: 0.5
     - _Rim_In_Light: 1
     - _Rim_In_Shadow: 1
+    - _SDFOffset: 0
+    - _SDFSoftness: 0
     - _SHADOW: 1
     - _SHADOWSS: 0
     - _SHADOW_COLOR_TEXTURE: 0
+    - _ShadowAOStrength: 1
     - _ShadowColorIntensity: 1
     - _ShadowColorIntensity2nd: 1
     - _ShadowColorTextureIntensity: 1
     - _ShadowIntensity: 1
+    - _ShadowPatternScale: 1
     - _ShadowRampV: 0
     - _ShadowThreshold: 0.5
     - _ShadowThreshold2nd: 0.25
@@ -331,6 +349,7 @@ Material:
     - _USE_SDF: 1
     - _USE_SHADOW: 3
     - _USE_Shadow_2nd: 0
+    - _USE_Shadow_Pattern_Texture: 0
     - _USE_Shadow_Ramp_Mask: 0
     - _USE_Specular: 0
     - _UseBaseAlpha: 0
