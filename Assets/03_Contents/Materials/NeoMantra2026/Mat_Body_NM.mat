@@ -178,13 +178,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _: 0.5
+    - _: 0
     - _AAShadowEdge: 1.5
     - _AMBIENTOCCLUSION: 0
     - _AMBIENT_OCCLUSION: 0
     - _AOLitAmbient: 0.2
     - _AOShadowAmbient: 1
     - _AOStrength: 1
+    - _AddLightMax: 2
+    - _AddLightStrength: 1
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
@@ -304,6 +306,7 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
+    - _USE_Additional_Light: 1
     - _USE_Angel_Ring: 0
     - _USE_Backlight: 0
     - _USE_EMISSION: 1

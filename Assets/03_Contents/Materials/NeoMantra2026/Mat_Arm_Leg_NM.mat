@@ -192,6 +192,8 @@ Material:
     - _AOLitAmbient: 1
     - _AOShadowAmbient: 1
     - _AOStrength: 1
+    - _AddLightMax: 1
+    - _AddLightStrength: 1
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
@@ -312,6 +314,7 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
+    - _USE_Additional_Light: 1
     - _USE_Angel_Ring: 0
     - _USE_Backlight: 0
     - _USE_EMISSION: 1

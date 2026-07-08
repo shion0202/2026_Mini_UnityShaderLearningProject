@@ -213,6 +213,9 @@ Material:
     - _AOLitAmbient: 0.2
     - _AOShadowAmbient: 1
     - _AOStrength: 1
+    - _AddLightMax: 1
+    - _AddLightSpecular: 0
+    - _AddLightStrength: 1
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
@@ -261,6 +264,7 @@ Material:
     - _EmissionScrollSpeed: 0
     - _EnvironmentReflections: 1
     - _FAKE_LIGHT_DIRECTION: 0
+    - _FaceLightPush: 0.15
     - _FakeLightDirectionByCamera: 0
     - _FakeLightFollowObject: 0
     - _FakeLightIntensity: 1
@@ -302,7 +306,7 @@ Material:
     - _ReceiveShadowDepth: 0
     - _ReceiveShadowHardness: 1
     - _ReceiveShadows: 1
-    - _Receive_Shadow: 0
+    - _Receive_Shadow: 1
     - _RimColorPower: 1
     - _RimDirectionAmount: 0
     - _RimInLight: 1
@@ -343,6 +347,7 @@ Material:
     - _SrcBlendAlpha: 1
     - _StageIsBefore: 0
     - _Surface: 0
+    - _USE_Additional_Light: 0
     - _USE_Angel_Ring: 0
     - _USE_Backlight: 0
     - _USE_EMISSION: 0
@@ -373,8 +378,9 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionScrollSpeed: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionTiling: {r: 1, g: 1, b: 0, a: 0}
-    - _FaceForward: {r: 0, g: 0, b: -1, a: 0}
-    - _FaceRight: {r: 1, g: -0, b: -0, a: 0}
+    - _FaceCenter: {r: 0.00000058393925, g: 1.5554099, b: 0.03148777, a: 0}
+    - _FaceForward: {r: -0.00000011920928, g: -0.00000011920929, b: -1, a: 0}
+    - _FaceRight: {r: 1, g: 0.00000011920928, b: -0.00000011920929, a: 0}
     - _FakeLightDirection: {r: 0, g: 0, b: 0, a: 0}
     - _FakeLightRefForward: {r: 0, g: 0, b: 1, a: 0}
     - _FakeLightRefRight: {r: 1, g: 0, b: 0, a: 0}

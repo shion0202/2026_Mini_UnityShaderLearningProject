@@ -35,6 +35,18 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _AlphaMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AngelRingMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BacklightThicknessMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: 7272a13d4f9d33d498e42ea5ebdcf6c8, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -79,7 +91,27 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ShadowAOMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ShadowColorTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadowIntensityMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadowPatternTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadowRamp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadowRampMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -101,11 +133,28 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AAShadowEdge: 1
     - _AOLitAmbient: 0.2
+    - _AOShadowAmbient: 1
     - _AOStrength: 1
+    - _AddLightMax: 1
+    - _AddLightStrength: 1
     - _AlphaClip: 1
     - _AlphaToMask: 1
+    - _AlphaValue: 1
     - _Ambient_Occlusion: 0
+    - _AngelRingIntensity: 1
+    - _AngelRingPower: 80
+    - _AngelRingShift: 0
+    - _AngelRingSoftness: 0.1
+    - _AngelRingThreshold: 0.5
+    - _BacklightAmbient: 0
+    - _BacklightBaseColorTint: 0
+    - _BacklightDistortion: 0.2
+    - _BacklightIntensity: 1
+    - _BacklightLightColorAffect: 1
+    - _BacklightPower: 3
+    - _BacklightShadowGate: 0
     - _BaseColorContribution: 0
     - _BaseMapColorPower: 1
     - _BaseMapSaturation: 1
@@ -113,6 +162,7 @@ Material:
     - _CastShadows: 1
     - _Cull: 2
     - _Custom_Light_Direction: 0
+    - _Cutoff: 0.5
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _Emission: 0
@@ -126,12 +176,14 @@ Material:
     - _FakeLightFollowObject: 0
     - _FakeLightIntensity: 0
     - _Hardness: 1
+    - _Hardness2nd: 1
     - _LightPitchOffset: 0
     - _LightYawOffset: 0
     - _MatCapMode1st: 0
     - _MatCapMode2nd: 0
     - _MatCapStrength1st: 1
     - _MatCapStrength2nd: 1
+    - _Mat_Cap: 0
     - _Mat_Cap_1st: 0
     - _Mat_Cap_2nd: 0
     - _NORMALMAP: 0
@@ -140,6 +192,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadow: 1
+    - _ReceiveShadowDepth: 0.3
     - _Receive_Shadow: 1
     - _RimColorPower: 1
     - _RimDirectionAmount: 0
@@ -149,27 +202,46 @@ Material:
     - _RimLightColorAffect: 0
     - _RimSoftness: 0.1
     - _RimWidth: 0.5
+    - _SDFOffset: 0
+    - _SDFSoftness: 0
     - _SHADOW_COLOR_TEXTURE: 0
+    - _ShadowAOStrength: 1
     - _ShadowColorIntensity: 1
+    - _ShadowColorIntensity2nd: 1
     - _ShadowColorTextureIntensity: 1
     - _ShadowIntensity: 1
+    - _ShadowPatternScale: 1
+    - _ShadowRampV: 0
     - _ShadowThreshold: 0.5
+    - _ShadowThreshold2nd: 0.25
+    - _Shadow_Color_Texture: 0
     - _SpecualrSoftness: 0.08
+    - _SpecularColorAffect: 0
     - _SpecularIntensity: 1
     - _SpecularPower: 24
+    - _SpecularSoftness: 0.1
     - _SpecularThreshold: 0.4
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
+    - _USE_Additional_Light: 1
+    - _USE_Angel_Ring: 0
+    - _USE_Backlight: 0
     - _USE_Light_Offset: 0
     - _USE_Parallax: 0
     - _USE_Rim_Light: 0
     - _USE_SHADOW: 1
+    - _USE_Shadow_2nd: 0
+    - _USE_Shadow_Pattern_Texture: 0
+    - _USE_Shadow_Ramp_Mask: 0
     - _USE_Specular: 0
+    - _UseBaseAlpha: 0
     - _ZTest: 4
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
+    - _AngelRingColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BacklightColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionScrollSpeed: {r: 0, g: 0, b: 0, a: 0}
@@ -177,8 +249,12 @@ Material:
     - _FaceForward: {r: 0, g: 0, b: 1, a: 0}
     - _FaceRight: {r: 1, g: 0, b: 0, a: 0}
     - _FakeLightDirection: {r: 0, g: 0, b: 1, a: 0}
+    - _FakeLightRefForward: {r: 0, g: 0, b: 1, a: 0}
+    - _FakeLightRefRight: {r: 1, g: 0, b: 0, a: 0}
+    - _FakeLightRefUp: {r: 0, g: 1, b: 0, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ShadowColor2nd: {r: 0, g: 0, b: 0, a: 1}
     - _ShadowColorTextureTint: {r: 1, g: 1, b: 1, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
