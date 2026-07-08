@@ -218,8 +218,10 @@ Material:
     - _AlphaToMask: 0
     - _AlphaValue: 1
     - _Ambient_Occlusion: 0
+    - _AngelRingIntensity: 1
     - _AngelRingPower: 12
     - _AngelRingShift: 0
+    - _AngelRingSoftness: 0.1
     - _AngelRingThreshold: 0.5
     - _AngleRingIntensity: 1
     - _AngleRingPower: 80
@@ -335,6 +337,7 @@ Material:
     - _SpecularHighlights: 1
     - _SpecularIntensity: 1
     - _SpecularPower: 24
+    - _SpecularSoftness: 0.1
     - _SpecularThreshold: 0.4
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
@@ -371,7 +374,7 @@ Material:
     - _EmissionScrollSpeed: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionTiling: {r: 1, g: 1, b: 0, a: 0}
     - _FaceForward: {r: 0, g: 0, b: -1, a: 0}
-    - _FaceRight: {r: 1, g: 0, b: 0, a: 0}
+    - _FaceRight: {r: 1, g: -0, b: -0, a: 0}
     - _FakeLightDirection: {r: 0, g: 0, b: 0, a: 0}
     - _FakeLightRefForward: {r: 0, g: 0, b: 1, a: 0}
     - _FakeLightRefRight: {r: 1, g: 0, b: 0, a: 0}
