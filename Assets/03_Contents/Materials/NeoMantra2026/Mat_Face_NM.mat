@@ -69,6 +69,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _BangShadowTexture:
+        m_Texture: {fileID: 2800000, guid: 411b663347a3e6b4690b108b97e4516c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: 65c663f404a67374b8c0e531adce0f9a, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -90,6 +94,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -161,6 +169,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 46a4283953986e34ba23d6955f28693c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SGNormal_198023f7ee9d4e86a5ac79bf3e377c36_1_2185214374_Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SGRimLight_cffee61529fc464f925e328b26993e43_4_658310099_Texture2D:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -172,7 +184,7 @@ Material:
     - _ShadowAOMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Offset: {x: 0, y: 7.93}
     - _ShadowColorTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -245,13 +257,15 @@ Material:
     - _BacklightLightColorAffect: 1
     - _BacklightPower: 3
     - _BacklightShadowGate: 0
+    - _BangShadowIntensity: 1
+    - _BangShadowOffset: 0.1
     - _BaseColorContribution: 0
     - _BaseMapColorPower: 1
     - _BaseMapSaturation: 1
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BlushIntensity: 1
-    - _BlushLit: 0
+    - _BlushLit: 1
     - _BumpScale: 1
     - _CastShadows: 1
     - _ClearCoatMask: 0
@@ -261,6 +275,8 @@ Material:
     - _Custom_Light_Direction: 0
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
+    - _DetailIntensity: 1
+    - _DetailNormalIntensity: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
@@ -361,10 +377,12 @@ Material:
     - _SrcBlendAlpha: 1
     - _StageIsBefore: 0
     - _Surface: 0
-    - _USE_Additional_Light: 1
+    - _USE_Additional_Light: 0
     - _USE_Angel_Ring: 0
     - _USE_Backlight: 0
+    - _USE_Bang_Shadow: 1
     - _USE_Blush: 1
+    - _USE_Detail_Map: 0
     - _USE_EMISSION: 0
     - _USE_Glow_Edge: 0
     - _USE_Light_Offset: 0
