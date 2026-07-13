@@ -43,6 +43,7 @@ MonoBehaviour:
     m_Asset: {fileID: 9015682904789395717}
     m_RegisteredShaders:
     - {fileID: 4800000, guid: 96246b1ead49a4c5a996fd477bc5a117, type: 3}
+    - {fileID: -6465566751694194690, guid: c4b99d7494b704b7c885015e0153163b, type: 3}
     m_ErrorOnUnregisteredVariant: 0
     m_UnregisteredVariants: []
 --- !u!200 &9015682904789395717
@@ -59,4 +60,9 @@ ShaderVariantCollection:
       - keywords: COLOR_FILTER EDGE_SHINY
         passType: 0
       - keywords: COLOR_FILTER SAMPLING_RGB_SHIFT TONE_GRAYSCALE
+        passType: 0
+  - first: {fileID: -6465566751694194690, guid: c4b99d7494b704b7c885015e0153163b, type: 3}
+    second:
+      variants:
+      - keywords: 
         passType: 0

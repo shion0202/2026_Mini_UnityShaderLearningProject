@@ -64,6 +64,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 85b37598faf1f974ea0aa00ad190c82b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _GlowEdgeMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _HeightMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -189,6 +193,10 @@ Material:
     - _FakeLightRefForward: 0
     - _FakeLightRefRight: 0
     - _FakeLightRefUp: 0
+    - _GlowEdgeBrightness: 3
+    - _GlowEdgeIntensity: 1
+    - _GlowEdgePower: 0.2
+    - _GlowEdgeSoftness: 0.2
     - _Hardness: 1
     - _Hardness2nd: 1
     - _LightPitchOffset: 0
@@ -244,6 +252,7 @@ Material:
     - _USE_Alpha: 0
     - _USE_Angel_Ring: 0
     - _USE_Backlight: 0
+    - _USE_Glow_Edge: 0
     - _USE_Light_Offset: 0
     - _USE_Parallax: 0
     - _USE_Rim_Light: 0
@@ -270,6 +279,7 @@ Material:
     - _FakeLightRefForward: {r: 0, g: 0, b: -1, a: 0}
     - _FakeLightRefRight: {r: -1, g: 0, b: 0, a: 0}
     - _FakeLightRefUp: {r: 0, g: 1, b: 0, a: 0}
+    - _GlowEdgeColor: {r: 0, g: 1, b: 0.97335625, a: 1}
     - _RimColor: {r: 0.13286836, g: 0.93011117, b: 1, a: 1}
     - _ShadowColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
     - _ShadowColor2nd: {r: 0, g: 0, b: 0, a: 1}
