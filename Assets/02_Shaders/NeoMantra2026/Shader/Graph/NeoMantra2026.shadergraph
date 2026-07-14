@@ -20510,8 +20510,8 @@
     "m_ObjectId": "663cad3ab261476b8b82105eed5cbcd6",
     "m_Title": "Lit Side",
     "m_Position": {
-        "x": 2978.999755859375,
-        "y": 10.000114440917969
+        "x": 2979.0,
+        "y": 10.0
     }
 }
 
@@ -20679,7 +20679,7 @@
     "m_DefaultRefNameVersion": 1,
     "m_RefNameGeneratedByDisplayName": "Normal Map",
     "m_DefaultReferenceName": "_NORMAL_MAP",
-    "m_OverrideReferenceName": "_NORMALMAP",
+    "m_OverrideReferenceName": "_USE_NORMALMAP",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
@@ -36213,8 +36213,8 @@
     "m_ObjectId": "dadff074dfab4c428184516d21e77d12",
     "m_Title": "Shadow Mask",
     "m_Position": {
-        "x": 1634.9998779296875,
-        "y": -1043.9998779296875
+        "x": 1635.0,
+        "y": -1044.0
     }
 }
 
