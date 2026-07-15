@@ -227,6 +227,7 @@ Material:
     - _GlowEdgeIntensity: 1
     - _GlowEdgePower: 0.2
     - _GlowEdgeSoftness: 0.2
+    - _GlowSmoothNormal: 0
     - _Hardness: 1
     - _Hardness2nd: 1
     - _LightPitchOffset: 0
@@ -254,6 +255,7 @@ Material:
     - _RimInShadow: 0
     - _RimIntensity: 1
     - _RimLightColorAffect: 0
+    - _RimSmoothNormal: 0
     - _RimSoftness: 0.1
     - _RimWidth: 0.2
     - _SDFOffset: 0

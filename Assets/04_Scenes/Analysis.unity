@@ -187,6 +187,86 @@ Transform:
   - {fileID: 1200768194}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &193686862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 193686863}
+  - component: {fileID: 193686864}
+  m_Layer: 0
+  m_Name: Render Feature Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &193686863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193686862}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &193686864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193686862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b025a55a030844049b25e154a171b705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NeoMantra2026.Scripts.RenderFeatureController
+  featureGroups:
+  - groupName: Outline
+    features:
+    - {fileID: 7646080319803752847, guid: f288ae1f4751b564a96ac7587541f7a2, type: 2}
+    enabled: 1
+  - groupName: Silhouette
+    features:
+    - {fileID: 1910935330984016608, guid: f288ae1f4751b564a96ac7587541f7a2, type: 2}
+    enabled: 1
+  - groupName: SilhouetteOutline
+    features:
+    - {fileID: -4982784058404833790, guid: f288ae1f4751b564a96ac7587541f7a2, type: 2}
+    enabled: 1
+  - groupName: Highlight
+    features:
+    - {fileID: 6645702001240388597, guid: f288ae1f4751b564a96ac7587541f7a2, type: 2}
+    enabled: 1
+  - groupName: HighlightOccluded
+    features:
+    - {fileID: -6630025511668808946, guid: f288ae1f4751b564a96ac7587541f7a2, type: 2}
+    enabled: 1
+  - groupName: FakeShadow
+    features:
+    - {fileID: 7506652955428619969, guid: f288ae1f4751b564a96ac7587541f7a2, type: 2}
+    enabled: 1
+  layerPairs:
+  - normalLayer: 0
+    selectedLayer: 7
+  characters:
+  - root: {fileID: 225528383}
+    selected: 0
+    savedObjects: []
+    savedLayers: 
+  highlightFeatures:
+  - {fileID: 6645702001240388597, guid: f288ae1f4751b564a96ac7587541f7a2, type: 2}
+  - {fileID: -6630025511668808946, guid: f288ae1f4751b564a96ac7587541f7a2, type: 2}
 --- !u!1 &225528383
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,7 +363,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225528383}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 266b0862d8e847d4f94969b6da261613, type: 2}
 --- !u!4 &225528387
 Transform:
   m_ObjectHideFlags: 0
@@ -2429,6 +2509,7 @@ MonoBehaviour:
   - {fileID: 929054154}
   - {fileID: 929054153}
   - {fileID: 929054152}
+  - {fileID: 225528385}
   savePath: Assets/03_Contents/Meshes/SmoothNormal
   originalMeshes:
   - {fileID: 3359138182758997695, guid: ce526c1c9fb032a44a27647395133367, type: 3}
@@ -2442,6 +2523,7 @@ MonoBehaviour:
   - {fileID: -1926809991077569748, guid: ce526c1c9fb032a44a27647395133367, type: 3}
   - {fileID: 5067366273072353171, guid: ce526c1c9fb032a44a27647395133367, type: 3}
   - {fileID: 2959467708922500008, guid: ce526c1c9fb032a44a27647395133367, type: 3}
+  - {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   bakedMeshes:
   - {fileID: 4300000, guid: 46dda7642186f4344afee2a5fd8f06fc, type: 2}
   - {fileID: 4300000, guid: 4ffb092a457ab35499f0a34aec97c96a, type: 2}
@@ -2454,6 +2536,7 @@ MonoBehaviour:
   - {fileID: 4300000, guid: 183b5d66cacbe654fab39f458f2a5b01, type: 2}
   - {fileID: 4300000, guid: 148c6fa7f79706746a3717ffd3d18127, type: 2}
   - {fileID: 4300000, guid: 725190e3327aa504fb5681d8ea7ede12, type: 2}
+  - {fileID: 4300000, guid: 266b0862d8e847d4f94969b6da261613, type: 2}
 --- !u!4 &1924076867
 Transform:
   m_ObjectHideFlags: 0
@@ -3546,9 +3629,17 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9209043892830037045, guid: f059f73e7a3a9fa4b82121a7e9b06d2f, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209043892830037045, guid: f059f73e7a3a9fa4b82121a7e9b06d2f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 08189944243ce324f9df3844e4d1ff67, type: 2}
+    - target: {fileID: 9209043892830037045, guid: f059f73e7a3a9fa4b82121a7e9b06d2f, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9501bffb70c7d6b428e85a4477be719f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -3632,13 +3723,14 @@ SceneRoots:
   m_Roots:
   - {fileID: 691397938}
   - {fileID: 1786443507}
-  - {fileID: 1799105139}
-  - {fileID: 250658786}
   - {fileID: 2052624727}
+  - {fileID: 193686863}
   - {fileID: 1924076867}
   - {fileID: 1414600372}
   - {fileID: 797645978}
+  - {fileID: 102905074}
+  - {fileID: 1799105139}
+  - {fileID: 250658786}
   - {fileID: 1242349126}
   - {fileID: 225528387}
   - {fileID: 5966926425100644844}
-  - {fileID: 102905074}

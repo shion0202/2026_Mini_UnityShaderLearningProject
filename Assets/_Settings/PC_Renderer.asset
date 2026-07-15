@@ -20,7 +20,7 @@ MonoBehaviour:
       RenderQueueType: 0
       LayerMask:
         serializedVersion: 2
-        m_Bits: 64
+        m_Bits: 128
       PassNames: []
     overrideMaterial: {fileID: 2100000, guid: d10670529457fb449a2a52c6509e4cdf, type: 2}
     overrideMaterialPassIndex: 0
@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
   m_Name: CharacterSilhouetteOutline
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.RenderObjects
-  m_Active: 0
+  m_Active: 1
   settings:
     passTag: CharacterSilhouetteOutline
     Event: 300
@@ -165,7 +165,7 @@ MonoBehaviour:
       RenderQueueType: 0
       LayerMask:
         serializedVersion: 2
-        m_Bits: 64
+        m_Bits: 192
       PassNames: []
     overrideMaterial: {fileID: 2100000, guid: 58fe8721cfc92f2478c2443715f949d8, type: 2}
     overrideMaterialPassIndex: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
       RenderQueueType: 0
       LayerMask:
         serializedVersion: 2
-        m_Bits: 64
+        m_Bits: 192
       PassNames: []
     overrideMaterial: {fileID: 0}
     overrideMaterialPassIndex: 0
@@ -249,7 +249,7 @@ MonoBehaviour:
       RenderQueueType: 0
       LayerMask:
         serializedVersion: 2
-        m_Bits: 64
+        m_Bits: 128
       PassNames: []
     overrideMaterial: {fileID: 2100000, guid: 58b599635bc6f7e44aae02fe67de391d, type: 2}
     overrideMaterialPassIndex: 0
@@ -302,11 +302,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
-  m_Name: CahracterOutline
+  m_Name: CharacterOutline
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.RenderObjects
   m_Active: 1
   settings:
-    passTag: CahracterOutline
+    passTag: CharacterOutline
     Event: 300
     filterSettings:
       RenderQueueType: 0
