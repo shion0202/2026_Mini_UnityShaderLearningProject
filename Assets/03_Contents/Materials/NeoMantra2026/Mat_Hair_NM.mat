@@ -287,6 +287,7 @@ Material:
     - _USE_Detail_Map: 0
     - _USE_Glow_Edge: 0
     - _USE_Light_Offset: 0
+    - _USE_NORMALMAP: 0
     - _USE_Parallax: 0
     - _USE_Rim_Light: 0
     - _USE_SHADOW: 1
