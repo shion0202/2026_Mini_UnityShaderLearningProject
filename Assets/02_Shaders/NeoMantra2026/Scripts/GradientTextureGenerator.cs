@@ -17,7 +17,7 @@ namespace NeoMantra2026.Scripts
 
         [Header("Gradient")]
         [SerializeField, Tooltip("생성할 그래디언트 텍스처 색.")] private Gradient gradient = new Gradient();
-        [SerializeField, Tooltip("그래디언트 방향. 가로=왼쪽(0)→오른쪽(1), 세로=아래(0)→위(1).")] private GradientDirection direction = GradientDirection.Horizontal;
+        [SerializeField, Tooltip("그래디언트 방향. (가로: 왼쪽→오른쪽, 세로: 아래→위)")] private GradientDirection direction = GradientDirection.Horizontal;
 
         [Header("Texture")]
         [SerializeField, Tooltip("텍스처 파일 이름.")] private string textureName = "Gradient_Sample";
@@ -28,13 +28,13 @@ namespace NeoMantra2026.Scripts
         [SerializeField, Tooltip("색 램프면 ON. 데이터(마스크/커브) 램프면 OFF.")] private bool sRGB = true;
         [SerializeField, Tooltip("UV 범위(0~1) 밖 샘플 처리 방식.")] private TextureWrapMode wrapMode = TextureWrapMode.Clamp;
         [SerializeField, Tooltip("픽셀 보간 방식.")] private FilterMode filterMode = FilterMode.Bilinear;
-        [SerializeField, Tooltip("런타임에 스크립트로 픽셀을 읽을 때만 필요. 셰이더 샘플만이면 OFF(메모리 절약).")] private bool readable = false;
+        [SerializeField, Tooltip("런타임에 스크립트로 픽셀을 읽을 때만 필요. 셰이더 샘플만이면 메모리 절약을 위해 OFF.")] private bool readable = false;
 
         [Header("Save")]
         [SerializeField, Tooltip("텍스처 저장 경로.")] private string savePath = "Assets/NeoMantra2026/Textures/Gradient";
 
         [Header("Result")]
-        [SerializeField, Tooltip("데이터를 반영할 텍스처 파일. 비어있을 경우 생성합니다.")] private Texture2D generatedTexture;
+        [SerializeField, Tooltip("데이터를 반영할 텍스처 파일. 비어있을 경우 생성.")] private Texture2D generatedTexture;
 
 #if UNITY_EDITOR
         public void BakeGradient()

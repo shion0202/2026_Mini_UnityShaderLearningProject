@@ -8,9 +8,9 @@ using System.IO;
 
 namespace NeoMantra2026.Scripts
 {
-    // 블러쉬(볼 홍조) 플레이스홀더 마스크 생성기.
+    // 블러시(볼 홍조) 임시 마스크 생성기.
     // 얼굴 UV 위 볼 위치에 소프트 타원 스팟을 찍은 R채널 마스크 PNG를 굽는다.
-    // 정식 텍스처는 아티스트가 UV 템플릿 위에 그리는 것이 정석 — 이건 배선 검증/임시용.
+    // 정식 텍스처는 아티스트가 UV 템플릿 위에 그리는 것이 정석.
     [AddComponentMenu("NeoMantra2026/Blush Texture Generator")]
     public class BlushTextureGenerator : MonoBehaviour
     {
@@ -18,14 +18,14 @@ namespace NeoMantra2026.Scripts
         public class BlushSpot
         {
             [Tooltip("스팟 중심 UV(0~1). 얼굴 UV에서 볼 위치.")] public Vector2 center = new Vector2(0.3f, 0.4f);
-            [Tooltip("타원 반지름(UV 단위). x=가로, y=세로.")] public Vector2 radius = new Vector2(0.08f, 0.05f);
-            [Range(0f, 1f), Tooltip("가장자리 부드러움. 0=칼경계, 1=중심부터 전부 그라데이션.")] public float softness = 0.6f;
+            [Tooltip("타원 반지름(UV 단위). (x: 가로, y: 세로)")] public Vector2 radius = new Vector2(0.08f, 0.05f);
+            [Range(0f, 1f), Tooltip("가장자리 부드러움. (0: 칼경계, 1: 중심부터 전부 그라데이션)")] public float softness = 0.6f;
             [Range(-90f, 90f), Tooltip("타원 기울기(도).")] public float rotation = 0f;
             [Range(0f, 1f), Tooltip("스팟 최대 농도.")] public float intensity = 1f;
         }
 
         [Header("Blush Spots")]
-        [SerializeField, Tooltip("찍을 스팟 목록. 미러 옵션을 쓰면 한쪽 볼만 정의해도 됨.")]
+        [SerializeField, Tooltip("찍을 스팟 목록. 미러 옵션을 쓸 경우 한쪽 볼만 정의.")]
         private List<BlushSpot> spots = new List<BlushSpot> { new BlushSpot() };
         [SerializeField, Tooltip("각 스팟을 U=0.5 기준 좌우 대칭 복제(볼 두 쪽). 얼굴 UV가 좌우 대칭일 때 사용.")]
         private bool mirrorU = true;
@@ -38,7 +38,7 @@ namespace NeoMantra2026.Scripts
         [SerializeField, Tooltip("텍스처 저장 경로.")] private string savePath = "Assets/NeoMantra2026/Textures/Blush";
 
         [Header("Result")]
-        [SerializeField, Tooltip("데이터를 반영할 텍스처 파일. 비어있을 경우 생성합니다.")] private Texture2D generatedTexture;
+        [SerializeField, Tooltip("데이터를 반영할 텍스처 파일. 비어있을 경우 생성.")] private Texture2D generatedTexture;
 
 #if UNITY_EDITOR
         public void BakeBlush()

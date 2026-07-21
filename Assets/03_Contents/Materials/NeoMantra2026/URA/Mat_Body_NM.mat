@@ -48,6 +48,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _BangShadowTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: c3e44c063e8d915438bb54938b68c61f, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -219,6 +223,8 @@ Material:
     - _BacklightLightColorAffect: 1
     - _BacklightPower: 3
     - _BacklightShadowGate: 0
+    - _BangShadowIntensity: 1
+    - _BangShadowOffset: 0.05
     - _BaseColorContribution: 1
     - _BaseMapColorPower: 1
     - _BaseMapSaturation: 1
@@ -260,6 +266,7 @@ Material:
     - _GlowEdgeIntensity: 1
     - _GlowEdgePower: 0.3
     - _GlowEdgeSoftness: 0.2
+    - _GlowSmoothNormal: 0
     - _Hardness: 1
     - _Hardness2nd: 1
     - _IsBaseMap: 0
@@ -287,7 +294,7 @@ Material:
     - _RECEIVE_SHADOW: 1
     - _ReceiveShadow: 1
     - _ReceiveShadow2nd: 0.5
-    - _ReceiveShadowDepth: 0.3
+    - _ReceiveShadowDepth: 0.333
     - _ReceiveShadowHardness: 1
     - _ReceiveShadows: 1
     - _Receive_Shadow: 1
@@ -297,6 +304,7 @@ Material:
     - _RimInShadow: 0
     - _RimIntensity: 1
     - _RimLightColorAffect: 0
+    - _RimSmoothNormal: 0
     - _RimSoftness: 0.1
     - _RimWidth: 0.2
     - _Rim_In_Light: 1
@@ -331,11 +339,13 @@ Material:
     - _USE_Additional_Light: 1
     - _USE_Angel_Ring: 0
     - _USE_Backlight: 0
+    - _USE_Bang_Shadow: 0
     - _USE_Blush: 0
     - _USE_Detail_Map: 0
     - _USE_EMISSION: 1
     - _USE_Glow_Edge: 0
     - _USE_Light_Offset: 0
+    - _USE_NORMALMAP: 0
     - _USE_Parallax: 0
     - _USE_Rim_Light: 1
     - _USE_SDF: 0

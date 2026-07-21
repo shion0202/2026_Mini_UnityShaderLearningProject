@@ -7,22 +7,22 @@ using System.IO;
 
 namespace NeoMantra2026.Scripts
 {
-    // 스무스 노멀 베이커: 위치가 같은 정점들의 노멀을 평균 → 탄젠트 공간으로 변환해 UV3에 저장.
-    // 아웃라인(인버티드 헐) 압출 방향용 — 하드엣지에서 껍질이 갈라져 아웃라인이 끊기는 문제 해결.
-    // 탄젠트 공간 저장이라 스키닝 변형을 TBN이 따라감(오브젝트 공간 저장의 본 미추종 한계 회피).
-    // 셰이딩 노멀(하드엣지)은 건드리지 않음 — UV3는 압출 전용 데이터.
+    // 스무스 노멀 베이커: 위치가 같은 정점들의 노멀을 평균 내어 탄젠트 공간으로 변환해 UV3에 저장.
+    // 아웃라인(인버티드 헐) 압출 방향용으로 사용하기 위해 구현하였으며, 하드엣지에서 껍질이 갈라져 아웃라인이 끊기는 문제를 해결.
+    // 스키닝 시 TBN이 같이 휘어 아웃라인이 본을 따라가도록 함.
+    // 셰이딩 노멀(하드엣지)는 건드리지 않으며, UV3를 압출 전용 데이터로 사용.
     [AddComponentMenu("NeoMantra2026/Smooth Normal Baker")]
     public class SmoothNormalBaker : MonoBehaviour
     {
         [Header("대상")]
-        [SerializeField, Tooltip("비우면 자식의 SkinnedMeshRenderer/MeshFilter 전체 자동 수집.")]
+        [SerializeField, Tooltip("비우면 자식의 SkinnedMeshRenderer와 MeshFilter 전체를 자동으로 수집.")]
         private List<Renderer> targetRenderers = new List<Renderer>();
 
         [Header("Save")]
         [SerializeField, Tooltip("베이크된 메시 에셋 저장 경로.")] private string savePath = "Assets/NeoMantra2026/Meshes/SmoothNormal";
 
-        [Header("Result (자동 기록 — 되돌리기용)")]
-        [SerializeField, Tooltip("스왑 전 원본 메시(되돌리기에 사용). 직접 수정하지 말 것.")]
+        [Header("Result (자동 기록)")]
+        [SerializeField, Tooltip("스왑 전 원본 메시(되돌리기에 사용). 직접 수정 금지.")]
         private List<Mesh> originalMeshes = new List<Mesh>();
         [SerializeField, Tooltip("원본과 짝을 이루는 베이크 메시.")]
         private List<Mesh> bakedMeshes = new List<Mesh>();

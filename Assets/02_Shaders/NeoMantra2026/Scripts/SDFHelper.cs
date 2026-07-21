@@ -7,7 +7,7 @@ namespace NeoMantra2026.Scripts
     public class SDFHelper : MonoBehaviour
     {
         [Header("References")]
-        [SerializeField, Tooltip("얼굴 방향 기준 Transform (머리 본 자식으로 두고 월드 기즈모로 정렬한 빈 오브젝트 권장). 비우면 자신.")] private Transform faceRoot;
+        [SerializeField, Tooltip("얼굴 방향 기준 Transform(머리 본의 자식으로 두고 월드 기즈모로 정렬한 빈 오브젝트를 권장). 비우면 자신.")] private Transform faceRoot;
         [SerializeField, Tooltip("얼굴 위치(_FaceCenter) 기준 Transform. 방향과 다른 소스를 쓰고 싶을 때 지정(예: 머리 본에 둔 빈 오브젝트). 비우면 faceRoot 위치 사용.")] private Transform faceCenter;
         [SerializeField, Tooltip("대상 렌더러. 비우면 자식에서 탐색.")] private Renderer targetRenderer;
         [SerializeField, Tooltip("렌더러에서 적용할 머티리얼 번호.")] private int materialIndex = 0;
@@ -17,7 +17,7 @@ namespace NeoMantra2026.Scripts
         [SerializeField, Tooltip("좌우 반전.")] private bool invertRight = false;
 
         [Header("Debug")]
-        [SerializeField, Tooltip("Forward(파랑)과 Right(빨강) 방향 확인용.")] private bool drawGizmo = true;
+        [SerializeField, Tooltip("Gizmo 그리기 여부. (Forward: 파랑, Right: 빨강, Center Position: 노랑)")] private bool drawGizmo = true;
 
         // 셰이더 프로퍼티 Reference 이름
         private string ForwardProperty = "_FaceForward";
@@ -37,20 +37,14 @@ namespace NeoMantra2026.Scripts
         private void OnEnable() { Apply(); }
         private void OnValidate() { _matInstance = null; Apply(); }
         private void LateUpdate() { Apply(); }
-
-        private void OnDisable()
-        {
-            RestoreDefault(_lastWritten);
-            _lastWritten = null;
-            _matInstance = null;
-        }
+        private void OnDisable() { RestoreDefault(_lastWritten); _lastWritten = null; _matInstance = null; }
 
         private void Apply()
         {
             Material mat = ResolveMaterial(out bool isSharedAsset);
             Material restoreTarget = isSharedAsset ? mat : null;
 
-            // 복원 대상이 바뀌면(스왑/플레이 진입 등) 직전 공유 에셋을 기본값 복원
+            // 복원 대상이 바뀌면(스왑/플레이 진입 등) 직전 공유 에셋의 기본값 복원
             if (_lastWritten != restoreTarget)
             {
                 RestoreDefault(_lastWritten);
@@ -58,13 +52,18 @@ namespace NeoMantra2026.Scripts
             }
 
             if (mat == null) return;
-            Transform dirT = faceRoot ? faceRoot : transform;      // 방향 소스
-            Transform posT = faceCenter ? faceCenter : dirT;       // 위치 소스(없으면 방향과 공용)
+
+            // 방향 및 위치 소스
+            Transform dirT = faceRoot ? faceRoot : transform;
+            Transform posT = faceCenter ? faceCenter : dirT;
+
             Vector3 fwd = dirT.forward * (invertForward ? -1f : 1f);
             Vector3 right = dirT.right * (invertRight ? -1f : 1f);
             mat.SetVector(ForwardProperty, fwd);
             mat.SetVector(RightProperty, right);
-            mat.SetVector(CenterProperty, posT.position); // 위치(w=0). 빛 쪽 밀기는 셰이더에서 처리
+
+            // 위치(w=0). 빛 쪽 밀기는 셰이더에서 처리.
+            mat.SetVector(CenterProperty, posT.position);
         }
 
         private Material ResolveMaterial(out bool isSharedAsset)
@@ -78,7 +77,8 @@ namespace NeoMantra2026.Scripts
                 // 플레이 중: 인스턴스 (무오염)
                 if (_matInstance == null)
                 {
-                    var mats = targetRenderer.materials; // 최초 접근 시 인스턴스화
+                    // 최초 접근 시 인스턴스화
+                    var mats = targetRenderer.materials;
                     if (materialIndex >= 0 && materialIndex < mats.Length)
                         _matInstance = mats[materialIndex];
                 }
@@ -108,7 +108,7 @@ namespace NeoMantra2026.Scripts
 
             Transform dirT = faceRoot ? faceRoot : transform;
             Transform posT = faceCenter ? faceCenter : dirT;
-            // 방향은 dirT 기준(월드 정렬 확인용), 원점은 위치 소스에서 그려 배치 감 잡기 쉽게
+
             Vector3 o = posT.position;
             Gizmos.color = Color.blue; // forward
             Gizmos.DrawLine(o, o + dirT.forward * (invertForward ? -0.3f : 0.3f));
