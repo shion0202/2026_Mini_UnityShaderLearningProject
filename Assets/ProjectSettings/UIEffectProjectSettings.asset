@@ -57,9 +57,19 @@ ShaderVariantCollection:
   - first: {fileID: 4800000, guid: 96246b1ead49a4c5a996fd477bc5a117, type: 3}
     second:
       variants:
+      - keywords: COLOR_FILTER
+        passType: 0
       - keywords: COLOR_FILTER EDGE_SHINY
         passType: 0
       - keywords: COLOR_FILTER SAMPLING_RGB_SHIFT TONE_GRAYSCALE
+        passType: 0
+      - keywords: SAMPLING_BLUR_FAST
+        passType: 0
+      - keywords: TONE_GRAYSCALE
+        passType: 0
+      - keywords: TONE_SEPIA
+        passType: 0
+      - keywords: TRANSITION_FADE
         passType: 0
   - first: {fileID: -6465566751694194690, guid: c4b99d7494b704b7c885015e0153163b, type: 3}
     second:

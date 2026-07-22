@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f212155a99858c140bd382097aa9945e, type: 3}
+  m_Name: UIEffectTweenerPresetLibrary
+  m_EditorClassIdentifier: Assembly-CSharp::UIEffectTweenerPresetLibrary
+  m_Presets:
+  - {fileID: 11400000, guid: b41bcdadbd38f654f9fa9fffa69af6de, type: 2}
+  - {fileID: 11400000, guid: 38cb849a73aa5054894b40f03ac7a059, type: 2}

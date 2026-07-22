@@ -197,6 +197,10 @@ MonoBehaviour:
     savedObjects:
     - {fileID: 766078728}
     savedLayers: 00000000
+  - root: {fileID: 0}
+    selected: 0
+    savedObjects: []
+    savedLayers: 
   highlightFeatures:
   - {fileID: 6645702001240388597, guid: f288ae1f4751b564a96ac7587541f7a2, type: 2}
   - {fileID: -6630025511668808946, guid: f288ae1f4751b564a96ac7587541f7a2, type: 2}
@@ -218,7 +222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &225528384
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2819,6 +2823,10 @@ PrefabInstance:
     - target: {fileID: 2765170935307037985, guid: f059f73e7a3a9fa4b82121a7e9b06d2f, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765170935307037985, guid: f059f73e7a3a9fa4b82121a7e9b06d2f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2788884998360722777, guid: f059f73e7a3a9fa4b82121a7e9b06d2f, type: 3}
       propertyPath: m_Layer

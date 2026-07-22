@@ -60,6 +60,10 @@ public class UIEffectController : MonoBehaviour
              "루프 샤인처럼 켜지자마자 재생이 필요한 경우에만 Forward/Reverse 로 바꾼다.")]
     [SerializeField] private UIEffectTweener.PlayOnEnable m_PlayOnEnable = UIEffectTweener.PlayOnEnable.None;
 
+    [Tooltip("이 UI 전용(선택) 트위너 프리셋. 공용 프리셋은 UIEffectManager 의 트위너 프리셋 라이브러리에 등록해 이름으로 부른다.\n" +
+             "여기 등록한 이름은 같은 이름의 라이브러리 프리셋보다 우선 적용된다(로컬 오버라이드).")]
+    [SerializeField] private List<UIEffectTweenerPreset> m_TweenerPresets = new List<UIEffectTweenerPreset>();
+
     /// <summary>제어 대상 UIEffect. 필요 시 지연 획득한다. (고급 속성 직접 접근용)</summary>
     public UIEffect Effect => m_Effect != null ? m_Effect : m_Effect = GetComponent<UIEffect>();
 
@@ -68,6 +72,9 @@ public class UIEffectController : MonoBehaviour
 
     /// <summary>등록된 프리셋 목록.</summary>
     public IReadOnlyList<PresetEntry> Presets => m_Presets;
+
+    // 이 UI 전용으로 등록된 트위너 프리셋 목록.
+    public IReadOnlyList<UIEffectTweenerPreset> TweenerPresets => m_TweenerPresets;
 
     private void Awake()
     {
@@ -105,19 +112,41 @@ public class UIEffectController : MonoBehaviour
     {
         if (!HasEffect) return;
 
-        // 1) 이 UI 전용 로컬 프리셋이 있으면 우선 사용(항목의 append 설정을 따른다)
-        var entry = FindPreset(id);
-        if (entry != null)
-        {
-            LoadPresetAsset(entry.preset, entry.append);
-            return;
-        }
-
-        // 2) 없으면 중앙 레지스트리에서 이름으로 조회
-        if (!TryLoadRegisteredPreset(id, false))
+        if (!TryLoadPreset(id))
         {
             Debug.LogWarning($"[{nameof(UIEffectController)}] '{id}' 프리셋을 로컬 목록과 중앙 레지스트리 어디에서도 찾지 못했습니다.", this);
         }
+    }
+
+    /// <summary>
+    /// id 프리셋을 불러오고 성공 여부를 반환한다. 실패해도 경고하지 않으므로
+    /// 호출자(예: UIEffectManager)가 실패 처리를 직접 할 수 있다.
+    /// </summary>
+    /// <param name="id">프리셋 id(로컬) 또는 중앙 레지스트리 이름.</param>
+    /// <param name="append">겹쳐 적용 여부. null 이면 로컬 항목의 append 설정을 따르고, 중앙 프리셋은 전체 교체.</param>
+    public virtual bool TryLoadPreset(string id, bool? append = null)
+    {
+        if (Effect == null) return false;
+
+        // 1) 이 UI 전용 로컬 프리셋이 있으면 우선 사용(인자 미지정 시 항목의 append 설정을 따른다)
+        var entry = FindPreset(id);
+        if (entry != null && entry.preset != null)
+        {
+            Effect.LoadPreset(entry.preset, append ?? entry.append);
+            return true;
+        }
+
+        // 2) 없으면 중앙 레지스트리에서 이름으로 조회
+        return TryLoadRegisteredPreset(id, append ?? false);
+    }
+
+    /// <summary>id 프리셋이 로컬 목록 또는 중앙 레지스트리에 존재하는지 확인한다(적용하지 않음).</summary>
+    public virtual bool HasPreset(string id)
+    {
+        var entry = FindPreset(id);
+        if (entry != null && entry.preset != null) return true;
+
+        return UIEffectProjectSettings.LoadPreset(id) != null;
     }
 
     /// <summary>등록 목록에서 인덱스로 프리셋을 불러온다. (항목의 append 설정을 따른다)</summary>
@@ -138,14 +167,7 @@ public class UIEffectController : MonoBehaviour
     {
         if (!HasEffect) return;
 
-        var entry = FindPreset(id);
-        if (entry != null)
-        {
-            LoadPresetAsset(entry.preset, true);
-            return;
-        }
-
-        if (!TryLoadRegisteredPreset(id, true))
+        if (!TryLoadPreset(id, true))
         {
             Debug.LogWarning($"[{nameof(UIEffectController)}] '{id}' 프리셋을 로컬 목록과 중앙 레지스트리 어디에서도 찾지 못했습니다.", this);
         }
@@ -187,6 +209,32 @@ public class UIEffectController : MonoBehaviour
     // ─────────────────────────────────────────────────────────────
     // 2) 트위너 제어 (UIEffectTweener 가 없으면 조용히/경고 후 무시)
     // ─────────────────────────────────────────────────────────────
+
+    // 트위너 프리셋 에셋을 직접 적용한다. 트위너가 없으면 false.
+    public virtual bool ApplyTweenerPreset(UIEffectTweenerPreset preset)
+    {
+        if (preset == null || Tweener == null) return false;
+
+        preset.ApplyTo(Tweener);
+
+        // 프리셋이 이 UI 의 트윈 정책을 통째로 정하도록, OnEnable 에서 되돌리는 컨트롤러 값도 함께 맞춘다.
+        // 이걸 빼먹으면 프리셋을 적용해도 다음 활성화 때 옛 설정으로 돌아간다.
+        m_PlayOnEnable = preset.PlayOnEnable;
+        return true;
+    }
+
+    // 이 UI 전용 목록에서 이름으로 트위너 프리셋을 찾아 적용한다. 없으면 false(경고 없음).
+    // 공용 라이브러리 조회는 UIEffectManager 가 담당한다.
+    public virtual bool TryLoadTweenerPreset(string id)
+    {
+        return ApplyTweenerPreset(FindTweenerPreset(id));
+    }
+
+    // 이 UI 전용 목록에 해당 이름의 트위너 프리셋이 있는지 확인한다.
+    public virtual bool HasTweenerPreset(string id)
+    {
+        return FindTweenerPreset(id) != null;
+    }
 
     /// <summary>정방향(0→1) 재생. resetTime=true 면 처음부터.</summary>
     public virtual void PlayForward(bool resetTime = true)
@@ -315,6 +363,19 @@ public class UIEffectController : MonoBehaviour
     // ─────────────────────────────────────────────────────────────
     // 내부 유틸
     // ─────────────────────────────────────────────────────────────
+
+    private UIEffectTweenerPreset FindTweenerPreset(string id)
+    {
+        if (string.IsNullOrEmpty(id)) return null;
+
+        for (var i = 0; i < m_TweenerPresets.Count; i++)
+        {
+            var preset = m_TweenerPresets[i];
+            if (preset != null && preset.ResolvedId == id) return preset;
+        }
+
+        return null;
+    }
 
     private PresetEntry FindPreset(string id)
     {

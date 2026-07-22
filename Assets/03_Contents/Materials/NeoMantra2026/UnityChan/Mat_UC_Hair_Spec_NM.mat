@@ -46,7 +46,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AngelRingMask:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: bde0a91b787e9aa468b81d09309e90e2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AngelRingNoiseTexture:
+        m_Texture: {fileID: 2800000, guid: 807d0d7636434b04cad3676357fdd6f4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AngelRing_Sampler:
@@ -340,7 +344,7 @@ Material:
     - _AR_OffsetV: 0.3
     - _ATDistance: 1
     - _AddLightMax: 5
-    - _AddLightSpecular: 1
+    - _AddLightSpecular: 0
     - _AddLightStrength: 1
     - _AddPrecomputedVelocity: 0
     - _Add_Antipodean_RimLight: 0
@@ -360,11 +364,12 @@ Material:
     - _Ambient_Occlusion: 0
     - _AngelRing: 0
     - _AngelRingIntensity: 1
+    - _AngelRingNoiseIntensity: 0.6
     - _AngelRingOverridden: 0
     - _AngelRingPower: 80
-    - _AngelRingShift: 0
-    - _AngelRingSoftness: 0.1
-    - _AngelRingThreshold: 0.5
+    - _AngelRingShift: -1
+    - _AngelRingSoftness: 0.3
+    - _AngelRingThreshold: 0
     - _AngelRingVisible: 1
     - _Anisotropy: 0
     - _Ap_RimLight_FeatherOff: 0
@@ -652,7 +657,7 @@ Material:
     - _Tweak_SystemShadowsLevel: 0
     - _Tweak_transparency: 0
     - _USE_Additional_Light: 1
-    - _USE_Angel_Ring: 0
+    - _USE_Angel_Ring: 1
     - _USE_Backlight: 0
     - _USE_Bang_Shadow: 0
     - _USE_Blush: 0
@@ -666,7 +671,7 @@ Material:
     - _USE_Shadow_2nd: 0
     - _USE_Shadow_Pattern_Texture: 0
     - _USE_Shadow_Ramp_Mask: 0
-    - _USE_Specular: 1
+    - _USE_Specular: 0
     - _UVBase: 0
     - _UVDetail: 0
     - _UVEmissive: 0
@@ -694,7 +699,7 @@ Material:
     m_Colors:
     - _1st_ShadeColor: {r: 0.8962264, g: 0.8136792, b: 0.7482645, a: 1}
     - _2nd_ShadeColor: {r: 0.8, g: 0.8, b: 1, a: 1}
-    - _AngelRingColor: {r: 1, g: 1, b: 1, a: 1}
+    - _AngelRingColor: {r: 1, g: 0.3, b: 0, a: 1}
     - _AngelRingMaskColor: {r: 0, g: 1, b: 0, a: 1}
     - _AngelRing_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Ap_RimLightColor: {r: 1, g: 1, b: 1, a: 1}
