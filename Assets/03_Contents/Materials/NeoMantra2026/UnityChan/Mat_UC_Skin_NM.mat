@@ -61,6 +61,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _AngelRingNoiseTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AngelRing_Sampler:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -360,6 +364,7 @@ Material:
     - _Ambient_Occlusion: 0
     - _AngelRing: 0
     - _AngelRingIntensity: 1
+    - _AngelRingNoiseIntensity: 1
     - _AngelRingOverridden: 0
     - _AngelRingPower: 80
     - _AngelRingShift: 0

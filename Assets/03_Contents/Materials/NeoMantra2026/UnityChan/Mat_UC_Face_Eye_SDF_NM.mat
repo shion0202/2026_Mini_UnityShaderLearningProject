@@ -48,6 +48,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _AngelRingNoiseTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AngelRing_Sampler:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -347,6 +351,7 @@ Material:
     - _Ambient_Occlusion: 0
     - _AngelRing: 0
     - _AngelRingIntensity: 1
+    - _AngelRingNoiseIntensity: 1
     - _AngelRingOverridden: 0
     - _AngelRingPower: 80
     - _AngelRingShift: 0
@@ -701,10 +706,10 @@ Material:
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
     - _Emissive_Color: {r: 0, g: 0, b: 0, a: 1}
-    - _FaceCenter: {r: -0.0007070077, g: 1.3381453, b: -0.023443418, a: 0}
-    - _FaceForward: {r: -0.000000029802315, g: 0.000000059604645, b: -1, a: 0}
-    - _FaceRight: {r: 1, g: -0.00000020861626, b: -0.00000002980233, a: 0}
-    - _FakeLightDirection: {r: 0, g: 0, b: 0, a: 0}
+    - _FaceCenter: {r: 0, g: 0, b: 0, a: 0}
+    - _FaceForward: {r: 0, g: 0, b: 1, a: 0}
+    - _FaceRight: {r: 1, g: 0, b: 0, a: 0}
+    - _FakeLightDirection: {r: 0, g: -90, b: 0, a: 0}
     - _FakeLightRefForward: {r: 0, g: 0, b: 1, a: 0}
     - _FakeLightRefRight: {r: 1, g: 0, b: 0, a: 0}
     - _FakeLightRefUp: {r: 0, g: 1, b: 0, a: 0}
