@@ -1,0 +1,19 @@
+{
+    "name": "UIEffectControl.Editor",
+    "rootNamespace": "UIEffectControl",
+    "references": [
+        "UIEffectControl",
+        "Coffee.UIEffect"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

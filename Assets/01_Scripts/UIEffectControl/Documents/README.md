@@ -34,6 +34,7 @@
 1. 씬에 `UIEffectManager` 컴포넌트를 하나 배치하고, **Tweener Preset Library** 에셋을 지정합니다. (없으면 트위너 프리셋을 이름으로 못 찾습니다.)
 2. 이펙트를 걸 각 UI 오브젝트에 `UIEffect`(패키지) + `UIEffectController` 를 붙입니다. 트윈이 필요하면 같은 오브젝트에 `UIEffectTweener` 도 추가합니다.
 3. **`UIEffect` / `UIEffectController` / `UIEffectTweener` 는 반드시 같은 GameObject 에 둡니다.** (컨트롤러가 트위너를 같은 오브젝트에서만 찾습니다.)
+4. TextMeshPro 텍스트에 이펙트를 걸 거면 UIEffect 패키지의 **TextMeshPro Support** 모듈도 임포트합니다. (TMP 는 자체 셰이더를 써서 이 모듈이 없으면 텍스트에 효과가 안 먹습니다.)
 
 ---
 

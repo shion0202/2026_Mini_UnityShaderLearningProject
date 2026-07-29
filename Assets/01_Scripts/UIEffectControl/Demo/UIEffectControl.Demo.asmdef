@@ -1,0 +1,16 @@
+{
+    "name": "UIEffectControl.Demo",
+    "rootNamespace": "UIEffectControl",
+    "references": [
+        "UIEffectControl"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
